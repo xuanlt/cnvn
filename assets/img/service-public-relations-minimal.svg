@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <style>
+    .speaker{transform-box:fill-box;transform-origin:center;animation:speak 2.4s ease-in-out infinite}.wave{transform-box:fill-box;transform-origin:left center;animation:wave 1.6s ease-out infinite}.w2{animation-delay:.25s}@keyframes speak{0%,100%{transform:rotate(0)}45%{transform:rotate(-3deg)}60%{transform:rotate(2deg)}}@keyframes wave{0%{opacity:0;transform:scaleX(.2)}45%,75%{opacity:1;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1.12)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <g class="speaker"><path d="M270 350h220l360-170v440L490 450H270z" fill="#c8102e"/><path d="m350 450 60 210h150l-70-210z" fill="#111"/></g>
+  <path class="wave" d="M910 280v240" fill="none" stroke="#111" stroke-width="22" stroke-linecap="round"/>
+  <path class="wave w2" d="M980 330v140" fill="none" stroke="#111" stroke-width="22" stroke-linecap="round"/>
+</svg>

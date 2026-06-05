@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <style>
+    .left,.right,.link,.dot{transform-box:fill-box;transform-origin:center}.left{animation:left 2.8s ease-in-out infinite}.right{animation:right 2.8s ease-in-out infinite}.link{animation:link 2.8s ease-in-out infinite}.dot{animation:pulse 2.8s ease-in-out infinite}@keyframes left{0%,100%{transform:translateX(-16px)}50%{transform:translateX(0)}}@keyframes right{0%,100%{transform:translateX(16px)}50%{transform:translateX(0)}}@keyframes link{0%,15%{transform:scaleX(.2);opacity:.25}50%,100%{transform:scaleX(1);opacity:1}}@keyframes pulse{0%,35%,100%{transform:scale(.75)}60%{transform:scale(1.18)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <circle class="left" cx="400" cy="400" r="190" fill="none" stroke="#111" stroke-width="28"/>
+  <circle class="right" cx="800" cy="400" r="190" fill="none" stroke="#c8102e" stroke-width="28"/>
+  <path class="link" d="M510 400h180" stroke="#c8102e" stroke-width="36" stroke-linecap="round"/>
+  <circle class="dot" cx="600" cy="400" r="48" fill="#c8102e"/>
+</svg>

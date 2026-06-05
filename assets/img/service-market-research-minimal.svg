@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <style>
+    .draw{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 3.2s ease-in-out infinite}.dot{transform-box:fill-box;transform-origin:center;animation:pulse 2s ease-in-out infinite}.d2{animation-delay:.2s}.d3{animation-delay:.4s}.d4{animation-delay:.6s}@keyframes draw{15%,100%{stroke-dashoffset:0}}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}.draw{stroke-dashoffset:0}}
+  </style>
+  <path class="draw" d="M190 610 430 430l190 100 350-330" fill="none" stroke="#c8102e" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="dot" cx="190" cy="610" r="34" fill="#111"/>
+  <circle class="dot d2" cx="430" cy="430" r="34" fill="#111"/>
+  <circle class="dot d3" cx="620" cy="530" r="34" fill="#111"/>
+  <circle class="dot d4" cx="970" cy="200" r="42" fill="#c8102e"/>
+</svg>
