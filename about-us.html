@@ -41,15 +41,97 @@
         </div>
       </header>
 
-      <main class="site-main custom-scroll page-main">
-        <section class="page-content">
-          <div class="container-fluid">
-            <p class="page-kicker">Connect Vietnam</p>
-            <h1 class="page-title">About Us</h1>
-            <p class="page-lead">We challenge limits, elevate visions, and spark opportunities.</p>
-          </div>
-        </section>
+      <main class="site-main custom-scroll subpage-main">
+        <div class="subpage-shell">
+          <header class="page-header">
+            <p class="page-header__breadcrumb"><a href="./index.html">Home</a><span>/</span>About Us</p>
+          </header>
+          <section class="page-content page-content--about">
+            <section class="about-hero" data-about-reveal>
+              <div class="about-hero__main">
+                <p class="about-label">About Us</p>
+                <h1>We are <strong>Connect Vietnam</strong></h1>
+              </div>
+              <p class="about-hero__lead">We translate strategy into real impacts through clarity, creativity, and communication that inspires.</p>
+            </section>
+
+            <figure class="about-photo" data-about-reveal>
+              <img src="./assets/img/about-office.png" alt="Connect Vietnam office" />
+            </figure>
+
+            <section class="about-vision" data-about-reveal>
+              <p class="about-label">Vision</p>
+              <p class="about-vision__quote">Your trusted bridge to impactful connections and opportunities.</p>
+            </section>
+
+            <section class="about-pillars">
+              <div class="about-values" data-about-reveal>
+                <p class="about-label">Core Values</p>
+                <ul>
+                  <li><span>Connection</span><i class="ph ph-share-network" aria-hidden="true"></i></li>
+                  <li><span>Communication</span><i class="ph ph-chats" aria-hidden="true"></i></li>
+                  <li><span>Creativity</span><i class="ph ph-lightbulb" aria-hidden="true"></i></li>
+                  <li><span>Commitment</span><i class="ph ph-handshake" aria-hidden="true"></i></li>
+                  <li><span>Curiosity</span><i class="ph ph-compass" aria-hidden="true"></i></li>
+                </ul>
+              </div>
+
+              <div class="about-mission" data-about-reveal>
+                <p class="about-label">Missions</p>
+                <div class="about-mission__list">
+                  <article>
+                    <i class="ph ph-chat-circle-dots" aria-hidden="true"></i>
+                    <p>Create communication that truly resonates</p>
+                  </article>
+                  <article>
+                    <i class="ph ph-chart-line-up" aria-hidden="true"></i>
+                    <p>Convert strategies into measurable impact</p>
+                  </article>
+                  <article>
+                    <i class="ph ph-star" aria-hidden="true"></i>
+                    <p>Cultivate meaningful connections &amp; partnerships</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="about-team">
+              <header class="about-team__header" data-about-reveal>
+                <div>
+                  <p class="about-label">Our People</p>
+                  <h2>Meet The Team</h2>
+                </div>
+                <a class="stroke-link stroke-link--dark text-uppercase text-normal" href="./careers.html">
+                  <span class="stroke-link__label">Join Us</span>
+                  <svg class="stroke-link__stroke" viewBox="0 0 180 80" aria-hidden="true">
+                    <path pathLength="1" d="M 18 27 C 2 40 10 59 52 64 C 110 70 158 54 168 21" />
+                  </svg>
+                </a>
+              </header>
+
+              <ul class="about-team__grid" id="aboutTeamGrid"></ul>
+            </section>
+          </section>
+        </div>
       </main>
+
+      <div class="about-team-modal" id="aboutTeamModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="aboutTeamModalName">
+        <button class="about-team-modal__overlay" type="button" aria-label="Close team profile" data-team-modal-close></button>
+        <div class="about-team-modal__box">
+          <button class="about-team-modal__close" type="button" aria-label="Close team profile" data-team-modal-close><i class="ph ph-x" aria-hidden="true"></i></button>
+          <div class="about-team-modal__avatar" id="aboutTeamModalAvatar" aria-hidden="true"></div>
+          <div class="about-team-modal__content">
+            <p class="about-team-modal__role" id="aboutTeamModalRole"></p>
+            <h2 class="about-team-modal__name" id="aboutTeamModalName"></h2>
+            <p class="about-team-modal__bio" id="aboutTeamModalBio"></p>
+            <dl class="about-team-modal__details">
+              <div><dt>Experience</dt><dd id="aboutTeamModalExperience"></dd></div>
+              <div><dt>Industries</dt><dd id="aboutTeamModalIndustries"></dd></div>
+              <div><dt>Clients</dt><dd id="aboutTeamModalClients"></dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
 
       <footer class="site-footer">
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false" data-menu-toggle>
@@ -74,6 +156,7 @@
     <script src="./assets/vendor/overlayscrollbars/overlayscrollbars.min.js"></script>
     <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/team-data.js"></script>
     <script src="./assets/js/page-about.js"></script>
   </body>
 </html>

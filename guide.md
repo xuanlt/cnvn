@@ -2,6 +2,13 @@
 
 Dự án này dùng HTML tĩnh, Tailwind CSS qua CDN, CSS custom theo BEM và vanilla JavaScript. Host hết tài nguyên về local. 
 
+## Dự án tham khảo
+
+- Dùng `/Users/xuanlt/Works/Freelancer/connectvietnam_html` làm dự án tham khảo chính về nội dung, visual direction, layout, grid, responsive, interaction và animation.
+- Khi áp dụng, cần chuyển đổi theo cấu trúc HTML/CSS/JS và convention hiện tại của repo `cnvn`; không copy nguyên kiến trúc hoặc dependency của dự án tham khảo nếu không được yêu cầu.
+- Repo `cnvn` vẫn là source of truth cho các hành vi và component đang tồn tại.
+- Quy ước tổ chức stylesheet và grid được ghi tại `assets/css/ARCHITECTURE.md`.
+
 ## Cấu trúc thư mục
 
 ```text
