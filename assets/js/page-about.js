@@ -3,7 +3,24 @@
 (function () {
   if (!document.body.classList.contains("page-about")) return;
 
-  var teamData = window.CNVNTeamData || [];
+  var teamData = [];
+
+  function loadTeamData() {
+    return fetch("./data/team.json")
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Unable to load team data: " + response.status);
+        }
+
+        return response.json();
+      })
+      .then(function (data) {
+        teamData = data;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }
 
   function renderTeam() {
     var grid = document.querySelector("#aboutTeamGrid");
@@ -123,7 +140,7 @@
       window.addEventListener("cnvn:page-revealed", revealHero, { once: true });
     }
 
-    document.querySelectorAll("[data-about-reveal]:not(.about-hero)").forEach(function (target) {
+    document.querySelectorAll("[data-about-reveal]:not(.about-hero):not(.about-mission)").forEach(function (target) {
       window.gsap.from(target, {
         autoAlpha: 0,
         y: 44,
@@ -138,19 +155,36 @@
       });
     });
 
-    window.gsap.from(".about-mission article", {
-      autoAlpha: 0,
-      scale: 0.78,
-      duration: 0.55,
-      ease: "back.out(1.5)",
-      stagger: 0.12,
+    var isMobile = window.matchMedia("(max-width: 767px)").matches;
+    var missionTimeline = window.gsap.timeline({
       scrollTrigger: {
         trigger: ".about-mission__list",
         scroller: scroller,
-        start: "top 82%",
+        start: isMobile ? "top 88%" : "top 82%",
         once: true,
       },
     });
+
+    missionTimeline
+      .from(".about-mission .about-label", {
+        autoAlpha: 0,
+        y: 24,
+        duration: 0.5,
+        ease: "power2.out",
+      })
+      .from(
+        ".about-mission article",
+        {
+          autoAlpha: 0,
+          scale: isMobile ? 0.86 : 0.78,
+          duration: isMobile ? 0.5 : 0.62,
+          ease: "back.out(1.6)",
+          stagger: isMobile ? 0.1 : 0.14,
+          transformOrigin: "center center",
+          clearProps: "transform,opacity,visibility",
+        },
+        "-=0.3",
+      );
 
     window.gsap.from(".about-team__card", {
       autoAlpha: 0,
@@ -193,7 +227,9 @@
     });
   }
 
-  renderTeam();
-  initTeamModal();
-  initAboutAnimations();
+  loadTeamData().then(function () {
+    renderTeam();
+    initTeamModal();
+    initAboutAnimations();
+  });
 })();

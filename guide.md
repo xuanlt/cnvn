@@ -5,6 +5,8 @@ Dự án này dùng HTML tĩnh, Tailwind CSS qua CDN, CSS custom theo BEM và va
 ## Dự án tham khảo
 
 - Dùng `/Users/xuanlt/Works/Freelancer/connectvietnam_html` làm dự án tham khảo chính về nội dung, visual direction, layout, grid, responsive, interaction và animation.
+- Đọc `/Users/xuanlt/Works/Freelancer/connectvietnam_html/design.md` trước khi quyết định visual, typography, component hoặc animation.
+- Dùng `design.md` trong repo này làm design-system source of truth đã được chuyển đổi cho kiến trúc hiện tại.
 - Khi áp dụng, cần chuyển đổi theo cấu trúc HTML/CSS/JS và convention hiện tại của repo `cnvn`; không copy nguyên kiến trúc hoặc dependency của dự án tham khảo nếu không được yêu cầu.
 - Repo `cnvn` vẫn là source of truth cho các hành vi và component đang tồn tại.
 - Quy ước tổ chức stylesheet và grid được ghi tại `assets/css/ARCHITECTURE.md`.
@@ -58,7 +60,8 @@ Ví dụ:
 - Mặc định dùng `.container-fluid` cho các vùng cần bám sát mép viewport như header, footer, app shell.
 - Dùng `.container` cho nội dung trang cần căn giữa, có `max-width` và padding responsive.
 - Không tự set `max-width` rời rạc trong từng section nếu có thể dùng token/container có sẵn.
-- Nội dung ở giữa trang luôn cố gắng đặt trong `.container` trước, sau đó mới chia grid bên trong.
+- Layout section thông thường bắt buộc theo cấu trúc `section > .container hoặc .container-fluid > .row > .col`.
+- Nội dung/component phải nằm bên trong `.col`; không đặt layout grid trực tiếp lên class component.
 - Nếu section cần full-bleed background, background nằm ở section, nội dung vẫn nằm trong `.container`.
 
 Ví dụ:
@@ -66,38 +69,39 @@ Ví dụ:
 ```html
 <section class="content-section">
   <div class="container">
-    ...
+    <div class="row">
+      <div class="col col-6 col-md-4 col-sm-4">
+        <div class="content-block">...</div>
+      </div>
+      <div class="col col-6 col-md-4 col-sm-4">
+        <div class="content-block">...</div>
+      </div>
+    </div>
   </div>
 </section>
 ```
 
 ### Grid 12 cột
 
-- Layout nội dung chính ưu tiên dùng grid 12 cột: `.grid grid--12`.
+- Layout nội dung chính dùng `.row` và `.col`: 12 cột desktop, 8 cột tablet, 4 cột mobile.
+- Dùng `.col-*`, `.col-md-*`, `.col-sm-*` để khai báo span theo từng breakpoint.
 - Không căn giữa bằng margin/padding tùy hứng nếu có thể đặt item vào cột hợp lý.
 - Nội dung text hẹp thường chiếm 4-6 cột, nội dung rộng/card list chiếm 8-12 cột, media lớn chiếm 6-8 cột tùy design.
 - Trên mobile, các cột nên tự rơi về 1 cột bằng breakpoint CSS thay vì hard-code width riêng.
 - Khi cần offset/căn vị trí theo design, ưu tiên dùng column span/start thay vì pixel absolute, trừ các chi tiết trang trí đặc thù.
+- Không gán `display: grid`, `grid-template-columns` hoặc `grid-column` vào class component như `.about-hero`, `.about-vision__quote`; đặt component bên trong `.row > .col`.
 
 Ví dụ:
 
 ```html
 <section class="content-section">
   <div class="container">
-    <div class="grid grid--12">
-      <div class="grid__col grid__col--6">...</div>
-      <div class="grid__col grid__col--6">...</div>
+    <div class="row">
+      <div class="col col-6 col-md-4 col-sm-4">...</div>
+      <div class="col col-6 col-md-4 col-sm-4">...</div>
     </div>
   </div>
 </section>
-```
-
-Ví dụ căn giữa nội dung 6 cột trong grid 12:
-
-```html
-<div class="grid grid--12">
-  <div class="grid__col grid__col--6 grid__col-start--4">...</div>
-</div>
 ```
 
 ### Home horizontal grid
@@ -120,20 +124,28 @@ Ví dụ:
 ```html
 <div class="grid-item screen-1 col-2 span-4 row-2">
   <div class="grid-content">
-    <h1 class="heading-title-1 text-black text-uppercase text-bold text-flat">Impacts</h1>
+    <h1 class="h1 text-black text-uppercase text-bold text-flat">Impacts</h1>
   </div>
 </div>
 ```
 
 ## Hệ thống typography
 
+- Dùng `--font-display` cho heading, kicker, nav label và CTA.
+- Dùng `--font-sans` cho body copy, description, metadata, form và UI text.
+- Toàn bộ typography chỉ dùng `.text-sm`, `.text-body`, `.text-leading`,
+  heading element `h1` đến `h6`, hoặc utility `.h1` đến `.h6`.
 - Không tự set `font-size` tùy ý trong component mới.
 - Luôn ưu tiên dùng size có sẵn trong hệ thống typography: CSS variable, utility class hoặc class component đã map về token.
 - Nếu Figma có size lạ, chọn token gần nhất trước. Chỉ thêm token mới khi size đó lặp lại nhiều lần hoặc là cấp typography quan trọng của brand.
 - Component chỉ nên set `font-weight`, `text-transform`, `text-align`, `max-width` khi cần; `font-size` và `line-height` nên lấy từ token.
 - Heading/content nên dùng đúng cấp bậc: display cho hero lớn, heading cho section, body cho paragraph, caption/nav cho meta/menu.
 - Không scale chữ bằng viewport width trực tiếp trong component mới. Nếu cần responsive, tạo token bằng `clamp()` ở `:root`, rồi dùng lại token đó.
-- Với home horizontal, text size dùng utility `.heading-title-1`, `.heading-title-2`, `.heading-title-3`, `.heading-title-4`; class nội dung chỉ giữ layout/position/transform đặc thù, không tự đặt `font-size`.
+- Với home horizontal, text size dùng utility `.h1`, `.h2`, `.h3`, `.h4`; class nội dung chỉ giữ layout/position/transform đặc thù, không tự đặt `font-size`.
+- `.home-grid` có scale heading riêng dẫn xuất từ hệ chung: `h1` có thể lớn
+  tối đa `2×`, còn `h2`, `h3` và `h4` tăng vừa đủ theo không gian grid. Scale phải
+  được khai báo tập trung trên `.home-grid` và giới hạn theo cả `vw` lẫn `vh`;
+  không override size riêng trên từng grid item.
 - Màu text trong home horizontal dùng utility `.text-black`, `.text-muted`, `.text-primary`, `.text-white`; component class không tự đặt `color`.
 - Text case/weight/margin trong home horizontal dùng utility như `.text-uppercase`, `.text-bold`, `.text-medium`, `.text-normal`, `.text-flat`; không tạo class content-specific chỉ để set typography như `.home-title`, `.home-kicker`, `.home-growth`.
 
@@ -141,30 +153,29 @@ Token khuyến nghị trong `assets/css/styles.css`:
 
 ```css
 :root {
-  --text-16: clamp(14px, 0.28vw + 13px, 16px);
-  --text-18: clamp(15px, 0.42vw + 13px, 18px);
-  --text-24: clamp(18px, 0.83vw + 15px, 24px);
-  --text-32: clamp(22px, 1.39vw + 17px, 32px);
-  --text-36: clamp(24px, 1.67vw + 18px, 36px);
-  --text-54: clamp(34px, 2.78vw + 24px, 54px);
-  --text-64: clamp(38px, 3.61vw + 25px, 64px);
-  --text-72: clamp(44px, 3.89vw + 30px, 72px);
-  --text-84: clamp(48px, 5vw + 30px, 84px);
-  --text-96: clamp(54px, 5.83vw + 33px, 96px);
-  --text-128: clamp(64px, 8.89vw + 32px, 128px);
-  --text-display-1: var(--text-128);
-  --text-display-2: var(--text-64);
-  --text-heading-1: var(--text-54);
-  --text-heading-2: var(--text-36);
-  --text-heading-3: var(--text-24);
-  --text-body: var(--text-16);
+  --text-sm: clamp(13px, 0.22vw + 12.2px, 14px);
+  --text-body: clamp(16px, 0.42vw + 14.5px, 18px);
+  --text-leading: clamp(18px, 1.35vw, 24px);
+  --h1: clamp(48px, 4.9vw, 72px);
+  --h2: clamp(32px, 3.33vw, 48px);
+  --h3: clamp(24px, 2.5vw, 36px);
+  --h4: clamp(18px, 1.35vw, 24px);
+  --h5: clamp(18px, 1.2vw, 22px);
+  --h6: clamp(16px, 1vw, 18px);
 }
 ```
+
+## Hệ thống màu và spacing
+
+- Ưu tiên token semantic: `--color-primary`, `--color-primary-bright`, `--color-text`, `--color-text-muted`, `--color-text-meta`, `--color-nav-bg`.
+- Không dùng màu hex/rgba trực tiếp trong component mới nếu token hiện có diễn đạt được vai trò.
+- Section tiêu chuẩn dùng `--section-space`: desktop `100px`, tablet `80px`, mobile `60px`.
+- About Vision dùng nền warm beige; About Team dùng gradient warm beige sang trắng.
 
 Ví dụ:
 
 ```html
-<h2 class="text-heading-2">Brand Solutions</h2>
+<h2>Brand Solutions</h2>
 <p class="text-body">...</p>
 ```
 
@@ -507,27 +518,26 @@ Typography nằm ở đầu `assets/css/styles.css`, dùng CSS variables và `cl
 Scale chính:
 
 ```css
---text-display-1
---text-display-2
---text-heading-1
---text-heading-2
---text-heading-3
+--text-sm
 --text-body
---text-small
---text-caption
---heading-title-1
---heading-title-2
---heading-title-3
---heading-title-4
+--text-leading
+--h1
+--h2
+--h3
+--h4
+--h5
+--h6
 ```
 
-HTML heading không tự map size global. Dùng utility class theo hệ token khi cần đổi cấp hiển thị mà vẫn giữ semantic tag:
+HTML heading tự map theo cấp `h1` đến `h6`. Dùng utility `.h1` đến `.h6`
+khi element không phải heading nhưng cần cùng cấp hiển thị:
 
 ```html
-<h1 class="text-display-1">Page title</h1>
-<h2 class="text-heading-2">Section title</h2>
+<h1>Page title</h1>
+<p class="h2">Section statement</p>
+<p class="text-leading">Intro copy</p>
 <p class="text-body">Body content</p>
-<span class="text-caption">Small label</span>
+<span class="text-sm">Small label</span>
 ```
 
 Quy ước dùng:
@@ -536,9 +546,9 @@ Quy ước dùng:
 - `h2`: tiêu đề section lớn.
 - `h3`: tiêu đề block/card quan trọng.
 - `h4` đến `h6`: tiêu đề nhỏ trong component.
+- `.text-leading`: intro, lead paragraph hoặc tagline.
 - `.text-body`: nội dung mặc định.
-- `.text-small`: nội dung phụ trong card/list.
-- `.text-caption`: stock badge, seller name, chú thích nhỏ.
+- `.text-sm`: metadata, caption, label và nội dung phụ.
 
 Cú pháp BEM:
 
