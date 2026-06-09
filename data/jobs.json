@@ -1,0 +1,66 @@
+[
+  {
+    "id": "senior-account-executive",
+    "title": "Senior Account Executive",
+    "location": "Ho Chi Minh City",
+    "type": "Full-time",
+    "salary": "Negotiable",
+    "deadline": "Open",
+    "description": "Lead client communication, coordinate campaign timelines, and keep project delivery on track across all accounts.",
+    "responsibilities": [
+      "Manage day-to-day client relationships and communications",
+      "Coordinate internal teams across creative, strategy, and production",
+      "Track campaign timelines and ensure on-time delivery",
+      "Prepare status reports, proposals, and meeting materials",
+      "Identify growth opportunities within existing accounts"
+    ],
+    "requirements": [
+      "2+ years experience in account management, PR, or integrated marketing",
+      "Strong communication and project management skills",
+      "Fluent in Vietnamese with working proficiency in English",
+      "Comfortable working in a fast-paced agency environment"
+    ]
+  },
+  {
+    "id": "creative-designer",
+    "title": "Creative Designer (2D/3D)",
+    "location": "Ho Chi Minh City",
+    "type": "Full-time",
+    "salary": "Negotiable",
+    "deadline": "Open",
+    "description": "Design event key visuals, stage mockups, and branded touchpoints across digital and physical spaces.",
+    "responsibilities": [
+      "Create event key visuals and brand identity assets",
+      "Design stage setups, booth mockups, and environmental graphics",
+      "Develop motion graphics and 3D visualisations for client presentations",
+      "Collaborate with strategy teams to translate concepts into executions"
+    ],
+    "requirements": [
+      "Proficiency in Adobe Creative Suite; Blender or similar 3D tools is a plus",
+      "Strong portfolio demonstrating event and brand design work",
+      "Sharp eye for detail and aesthetic consistency",
+      "Able to manage multiple projects under tight deadlines"
+    ]
+  },
+  {
+    "id": "event-operations-intern",
+    "title": "Event Operations Intern",
+    "location": "Ho Chi Minh City",
+    "type": "Internship",
+    "salary": "Negotiable",
+    "deadline": "Open",
+    "description": "Support onsite logistics, supplier coordination, and production setup for live brand activations.",
+    "responsibilities": [
+      "Assist with event logistics planning and supplier coordination",
+      "Support production setup and breakdown for live events",
+      "Track vendor deliverables and maintain event run-of-show documents",
+      "Provide onsite support and troubleshooting during event execution"
+    ],
+    "requirements": [
+      "Currently enrolled in Marketing, Events Management, or a related field",
+      "Proactive attitude with strong organisational skills",
+      "Comfortable working in dynamic, fast-moving environments",
+      "Basic proficiency in MS Office or Google Workspace"
+    ]
+  }
+]

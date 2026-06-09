@@ -1,0 +1,139 @@
+{
+  "shifts": [
+    {
+      "from": "Brand getting lost",
+      "to": "Sharp positioning",
+      "detail": "Approach market noise with strategy and real insights."
+    },
+    {
+      "from": "Message not landing",
+      "to": "Stories that touch",
+      "detail": "Create narratives and messages that resonate with the right audience."
+    },
+    {
+      "from": "Weak execution",
+      "to": "End-to-end support",
+      "detail": "Turn strong ideas into seamless creative execution from A to Z."
+    },
+    {
+      "from": "Limited media access",
+      "to": "Powerful media network",
+      "detail": "Leverage social, press, broadcast, and events to reach your target."
+    },
+    {
+      "from": "Unsteady growth",
+      "to": "Sustainable branding",
+      "detail": "Build a communication roadmap for lasting brand influence."
+    }
+  ],
+  "services": [
+    {
+      "title": "Market research & Entry Strategy",
+      "icon": "ph-chart-bar",
+      "image": "./assets/img/service-market-research-minimal.svg",
+      "headline": "Decode insights and market trends to shape winning strategies.",
+      "description": "We turn in-depth market research into your winning strategy. With an expert lens, we cut through market uncertainty with clarity, confidence, and relevance.",
+      "groups": [
+        {
+          "label": "Market Research",
+          "items": ["Market size & growth", "Competitor analysis", "Customer journey", "Risk assessment", "Market trends & opportunities"]
+        },
+        {
+          "label": "Entry Strategy",
+          "items": ["Positioning strategy", "Go-to-market planning", "Communication roadmap"]
+        }
+      ]
+    },
+    {
+      "title": "Brand building & Public relations",
+      "icon": "ph-pen-nib",
+      "image": "./assets/img/service-public-relations-minimal.svg",
+      "headline": "Build brands and spark meaningful engagement.",
+      "description": "Through brand stories and PR campaigns that elevate your presence, we help you earn trust, strengthen credibility, and stay top-of-mind.",
+      "groups": [
+        {
+          "label": "Brand Building",
+          "items": ["Brand positioning", "Content strategy", "KOL/KOC campaigns", "Social media execution"]
+        },
+        {
+          "label": "Public Relations",
+          "items": ["Media relations", "Press releases", "Stakeholder engagement"]
+        }
+      ]
+    },
+    {
+      "title": "Product marketing & Localization",
+      "icon": "ph-globe",
+      "image": "./assets/img/service-localization-minimal.svg",
+      "headline": "Refine your product stories for the target market.",
+      "description": "We adapt product stories, messages, and creative expressions so they feel relevant, clear, and natural in the local market.",
+      "groups": [
+        {
+          "label": "Localization",
+          "items": ["Product story adaptation", "Localization", "Content customization", "Campaign adaptation"]
+        }
+      ]
+    },
+    {
+      "title": "Market access & Partnership",
+      "icon": "ph-handshake",
+      "image": "./assets/img/service-market-access-minimal.svg",
+      "headline": "Unlock opportunities and build meaningful partnerships.",
+      "description": "We connect you with the right partners to ensure smooth entry, strong collaboration, and sustainable growth.",
+      "groups": [
+        {
+          "label": "Market Access",
+          "items": ["Partner identification", "Distributor and agent vetting", "Contract negotiation support", "Regulatory compliance guidance", "Project coordination"]
+        }
+      ]
+    },
+    {
+      "title": "Government & Institutional relations",
+      "icon": "ph-buildings",
+      "image": "./assets/img/service-government-relations-minimal.svg",
+      "headline": "Establish key relationships.",
+      "description": "With our network across government agencies, industry associations, and trade organizations, we streamline communication and open doors to decision-makers.",
+      "groups": [
+        {
+          "label": "Institutional Relations",
+          "items": ["Government liaison", "Regulatory monitoring", "Trade association engagement", "Policy analysis and advisory", "Relationship management"]
+        }
+      ]
+    },
+    {
+      "title": "Ongoing market intelligence & Support",
+      "icon": "ph-binoculars",
+      "image": "./assets/img/service-market-intelligence-minimal.svg",
+      "headline": "Ensure your long-term presence and growth.",
+      "description": "We monitor market trends, social conversations, and emerging challenges to keep your brand proactive, relevant, and ready to respond.",
+      "groups": [
+        {
+          "label": "Ongoing Support",
+          "items": ["Social listening", "Competitor analysis", "Strategy optimization", "Risk & crisis management", "Performance reporting"]
+        }
+      ]
+    }
+  ],
+  "network": [
+    {
+      "title": "Digital & Online Media",
+      "icon": "ph-share-network",
+      "items": ["Social networks", "News & websites", "Webinars & online forums"]
+    },
+    {
+      "title": "Broadcast Media",
+      "icon": "ph-television",
+      "items": ["TV news & programs", "Broadcast collaboration"]
+    },
+    {
+      "title": "Events & Experiential",
+      "icon": "ph-calendar-star",
+      "items": ["Events", "Conferences & exhibitions"]
+    },
+    {
+      "title": "Key Connection & Relation",
+      "icon": "ph-handshake",
+      "items": ["Strategic stakeholders", "Institutional relations", "Partner connection"]
+    }
+  ]
+}

@@ -32,7 +32,7 @@
             </a>
             <div class="site-contact">
               <a class="site-contact__phone" href="tel:+8412345678"><i class="ph ph-phone icon" aria-hidden="true"></i><span>+84 123 456 78</span></a>
-              <a class="site-contact__email" href="mailto:contact@connectvietnam.com"><i class="ph ph-envelope-simple icon" aria-hidden="true"></i><span>contact@connectvietnam.com</span></a>
+              <a class="site-contact__email" href="mailto:hi@connectvietnam.com"><i class="ph ph-envelope-simple icon" aria-hidden="true"></i><span>hi@connectvietnam.com</span></a>
             </div>
             <a class="icon-btn icon-btn--contact" href="./contact.html" aria-label="Contact Connect Vietnam">
               <i class="ph ph-headset icon" aria-hidden="true"></i>
@@ -46,13 +46,80 @@
           <header class="page-header">
             <p class="page-header__breadcrumb"><a href="./index.html">Home</a><span>/</span>Creations Discover</p>
           </header>
-          <section class="page-content page-content--intro">
-            <p class="page-content__kicker">From dots to stories</p>
-            <h1 class="page-content__title">Creations Discover</h1>
-            <p class="page-content__lead">A starting place for featured projects and impact stories.</p>
-          </section>
+          <div class="page-content page-content--creations">
+            <section class="creations-hero" aria-labelledby="creationsTitle">
+              <div class="container">
+                <div class="row row--align-end creations-hero__row">
+                  <div class="col col-7 col-md-5 col-sm-4">
+                    <div class="creations-hero__main">
+                      <p class="creations-label">Creations Discover</p>
+                      <h1 id="creationsTitle">We turn your <span class="text-primary">ideas</span> into <span class="text-primary">reality</span></h1>
+                    </div>
+                  </div>
+                  <div class="col col-1 col-hide-md" aria-hidden="true"></div>
+                  <div class="col col-4 col-md-3 col-sm-4">
+                    <p class="creations-hero__lead">We bring your brand to the right audience through bold &amp; creative communication.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="creations-work" aria-labelledby="creationsWorkTitle">
+              <h2 class="sr-only" id="creationsWorkTitle">Selected Work</h2>
+              <div class="text-marquee text-marquee--compact creations-work__marquee" aria-hidden="true">
+                <span class="text-marquee__track">
+                  <span>Selected Work ✳ Brand Identity ✳ Campaigns ✳ Visual Stories ✳ Digital ✳</span>
+                  <span>Selected Work ✳ Brand Identity ✳ Campaigns ✳ Visual Stories ✳ Digital ✳</span>
+                </span>
+              </div>
+              <div class="container">
+                <header class="section-heading" data-brand-reveal>
+                  <p class="creations-label">Portfolio</p>
+                  <h2>Selected Work</h2>
+                </header>
+              </div>
+              <div class="container-fluid container-fluid--flush">
+                <div class="row row--no-gap">
+                  <div class="col col-12 col-md-8 col-sm-4">
+                    <ul class="creations-project-list" id="creationsProjectList"></ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="creations-cta" aria-labelledby="creationsCtaTitle">
+              <div class="container">
+                <div class="row row--align-end" data-creations-reveal>
+                  <div class="col col-7 col-md-5 col-sm-4">
+                    <p class="creations-label">Start a project</p>
+                    <h2 id="creationsCtaTitle">Have <span class="text-primary">a story</span><br />ready to move?</h2>
+                  </div>
+                  <div class="col col-1 col-hide-md" aria-hidden="true"></div>
+                  <div class="col col-4 col-md-3 col-sm-4 col--justify-end col--justify-start-sm">
+                    <a class="stroke-link stroke-link--dark h4 text-uppercase text-normal" href="./contact.html">
+                      <span class="stroke-link__label">Talk to us</span>
+                      <svg class="stroke-link__stroke" viewBox="0 0 220 80" aria-hidden="true">
+                        <path pathLength="1" d="M 18 28 C 4 44 16 62 68 66 C 126 70 190 56 208 22" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </main>
+
+      <div class="creations-modal" id="creationsModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="creationsModalTitle">
+        <button class="creations-modal__overlay" type="button" aria-label="Close project details" data-creations-modal-close></button>
+        <article class="creations-modal__panel">
+          <button class="creations-modal__close" type="button" aria-label="Close project details" data-creations-modal-close><i class="ph ph-x" aria-hidden="true"></i></button>
+          <figure class="creations-modal__media">
+            <img src="" alt="" id="creationsModalImage" />
+          </figure>
+          <div class="creations-modal__content" id="creationsModalContent"></div>
+        </article>
+      </div>
 
       <footer class="site-footer">
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false" data-menu-toggle>
@@ -66,7 +133,7 @@
             <li class="nav-item item-about"><a class="nav-link" href="./about-us.html"><span class="nav-link__text" data-text="About Us">About Us</span></a></li>
             <li class="nav-item item-brand"><a class="nav-link" href="./brand-solutions.html"><span class="nav-link__text" data-text="Brand Solutions">Brand <br /> Solutions</span></a></li>
             <li class="nav-item item-creations"><a class="nav-link" href="./creations-discover.html"><span class="nav-link__text" data-text="Creations Discover">Creations <br /> Discover</span></a></li>
-            <li class="nav-item item-careers"><a class="nav-link" href="./careers.html"><span class="nav-link__text" data-text="Carrers">Carrers</span></a></li>
+            <li class="nav-item item-careers"><a class="nav-link" href="./careers.html"><span class="nav-link__text" data-text="Careers">Careers</span></a></li>
             <li class="nav-item item-contact"><a class="nav-link" href="./contact.html"><span class="nav-link__text" data-text="Contact">Contact</span></a></li>
           </ul>
         </nav>

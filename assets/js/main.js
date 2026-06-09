@@ -274,7 +274,13 @@
       }
 
       event.preventDefault();
-      leavePage(link.href);
+
+      var isMobileNav = link.closest(".nav-primary") && window.matchMedia("(max-width: 767px)").matches;
+      if (isMobileNav) {
+        setTimeout(function () { leavePage(link.href); }, 720);
+      } else {
+        leavePage(link.href);
+      }
     });
 
     window.addEventListener("pageshow", function () {

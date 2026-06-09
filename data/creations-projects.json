@@ -1,0 +1,137 @@
+[
+  {
+    "id": "navro-market-debut",
+    "title": "Navro Market Debut",
+    "category": "Launch campaign",
+    "client": "Navro",
+    "year": "2024",
+    "sector": "Market entry, lifestyle retail",
+    "image": "./assets/img/project-navro.jpg",
+    "imageAlt": "Navro launch campaign visual",
+    "description": "A clean launch story for a new market entrant, built around visibility, trust, and local relevance.",
+    "problem": "Navro needed to launch in a new market with low brand awareness, product messaging that had not yet been localized, and limited trust-building touchpoints for its target audience.",
+    "solution": "Connect Vietnam built a launch story around credibility, local relevance, and trial-driven engagement, giving the brand a clear communication route from awareness to consideration.",
+    "services": ["Creative direction", "PR kit", "Digital assets"],
+    "work": [
+      "Developed the launch narrative and key messages",
+      "Built the PR kit, media angles, and Q&A materials",
+      "Guided the visual direction for digital campaign assets",
+      "Planned the launch-phase social content flow",
+      "Advised on partner and first-customer outreach"
+    ],
+    "results": [
+      "Created a unified message system for the launch campaign",
+      "Improved brand clarity across digital and media touchpoints",
+      "Reduced preparation time for sales and partner-facing communication materials"
+    ],
+    "featured": true
+  },
+  {
+    "id": "cbr-story-grid",
+    "title": "CBR Story Grid",
+    "category": "Content system",
+    "client": "CBR",
+    "year": "2024",
+    "sector": "Content strategy, B2B communication",
+    "image": "./assets/img/project-cbr.jpg",
+    "imageAlt": "CBR content system visual",
+    "description": "A repeatable content system that turns expert knowledge into clear, consistent storylines.",
+    "problem": "CBR had strong subject-matter knowledge, but its content was fragmented, difficult to maintain consistently, and not yet shaped into clear storylines for its audience.",
+    "solution": "Connect Vietnam designed a repeatable content grid with clear pillars, enabling the team to publish consistently while keeping the brand voice and expert positioning aligned.",
+    "services": ["Social content", "Messaging", "Content rhythm"],
+    "work": [
+      "Audited existing content and identified message gaps",
+      "Built content pillars and a message house",
+      "Designed scalable social content formats",
+      "Wrote sample captions and headline routes by topic",
+      "Proposed a monthly content rhythm"
+    ],
+    "results": [
+      "Created a practical content system for the internal team",
+      "Improved consistency between expert messaging and social storytelling",
+      "Built a reusable format library for future campaigns"
+    ],
+    "featured": true
+  },
+  {
+    "id": "culture-popup-lab",
+    "title": "Culture Pop-up Lab",
+    "category": "Experiential",
+    "client": "Culture Pop-up Lab",
+    "year": "2023",
+    "sector": "Experiential marketing, brand activation",
+    "image": "./assets/img/culture-creative-discussion.jpg",
+    "imageAlt": "Creative team planning an activation",
+    "description": "A modular event concept that turns audience insight into hands-on brand participation.",
+    "problem": "The client wanted a live engagement format, but needed a concept flexible enough for multiple venues and compelling enough to invite natural audience participation.",
+    "solution": "Connect Vietnam translated cultural and behavioral insights into a modular pop-up concept where audiences had reasons to touch, try, participate, and share.",
+    "services": ["Event concept", "Experience design", "Participation journey"],
+    "work": [
+      "Researched audience insights and the participation journey",
+      "Built the activation concept and experience flow",
+      "Proposed layout, content touchpoints, and check-in mechanics",
+      "Developed onsite guidance for the activation team",
+      "Designed a post-event engagement measurement framework"
+    ],
+    "results": [
+      "Created a flexible concept that could travel across venues",
+      "Increased the quality of interaction between audience and brand",
+      "Delivered assets and operating scripts for future activations"
+    ],
+    "featured": true
+  },
+  {
+    "id": "small-dots-big-movement",
+    "title": "Small dots. Big movement.",
+    "category": "Brand idea",
+    "client": "Confidential brand partner",
+    "year": "2023",
+    "sector": "Campaign platform, brand idea",
+    "image": "./assets/img/about-office.png",
+    "imageAlt": "Connect Vietnam office detail",
+    "description": "Campaign platforms shaped for fast rollout and long-term recall.",
+    "problem": "The brand needed a big idea that was simple to remember, broad enough for multi-channel rollout, and flexible enough to support smaller initiatives over time.",
+    "solution": "Connect Vietnam developed a campaign platform based on the idea of turning small touchpoints into larger momentum, allowing the concept to scale across social, PR, and activation.",
+    "services": ["Big idea", "Campaign platform", "Creative route"],
+    "work": [
+      "Explored brand truth and audience tension",
+      "Developed campaign territories and tagline routes",
+      "Created the concept-level key visual direction",
+      "Proposed channel-specific activation ideas",
+      "Prepared a concise campaign playbook for rollout teams"
+    ],
+    "results": [
+      "Created a memorable and expandable campaign foundation",
+      "Aligned content, design, and media teams around one creative route",
+      "Shortened the concept approval cycle for follow-up assets"
+    ],
+    "featured": false
+  },
+  {
+    "id": "signals-and-conversations",
+    "title": "Signals & Conversations",
+    "category": "Digital forum",
+    "client": "Signals & Conversations",
+    "year": "2024",
+    "sector": "Digital forum, thought leadership",
+    "image": "./assets/img/culture-creative-discussion.jpg",
+    "imageAlt": "Online forum production planning",
+    "description": "A webinar-led content route connecting expert voices, press angles, and post-event social proof.",
+    "problem": "The client wanted to use webinars to build expert credibility, but needed stronger content structure before, during, and after the event to sustain media and community conversations.",
+    "solution": "Connect Vietnam created a webinar-led content route connecting expert voices, media angles, and post-event social proof, turning a single session into a sequence of communication assets.",
+    "services": ["Webinar", "Content route", "Media angle"],
+    "work": [
+      "Designed the webinar topic and discussion structure",
+      "Built the speaker brief, run-of-show, and prompting questions",
+      "Developed pre-event and post-event media angles",
+      "Edited recap content, quote cards, and social cutdowns",
+      "Proposed a follow-up flow for interested audiences"
+    ],
+    "results": [
+      "Turned event content into multiple post-event communication formats",
+      "Improved the usability of expert quotes for PR and social channels",
+      "Created ongoing dialogue instead of a one-off webinar moment"
+    ],
+    "featured": false
+  }
+]

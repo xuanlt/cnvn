@@ -32,7 +32,7 @@
             </a>
             <div class="site-contact">
               <a class="site-contact__phone" href="tel:+8412345678"><i class="ph ph-phone icon" aria-hidden="true"></i><span>+84 123 456 78</span></a>
-              <a class="site-contact__email" href="mailto:contact@connectvietnam.com"><i class="ph ph-envelope-simple icon" aria-hidden="true"></i><span>contact@connectvietnam.com</span></a>
+              <a class="site-contact__email" href="mailto:hi@connectvietnam.com"><i class="ph ph-envelope-simple icon" aria-hidden="true"></i><span>hi@connectvietnam.com</span></a>
             </div>
             <a class="icon-btn icon-btn--contact" href="./contact.html" aria-label="Contact Connect Vietnam">
               <i class="ph ph-headset icon" aria-hidden="true"></i>
@@ -46,13 +46,82 @@
           <header class="page-header">
             <p class="page-header__breadcrumb"><a href="./index.html">Home</a><span>/</span>Careers</p>
           </header>
-          <section class="page-content page-content--intro">
-            <p class="page-content__kicker">Join the team</p>
-            <h1 class="page-content__title">Careers</h1>
-            <p class="page-content__lead">A starting place for open roles, team culture, and hiring information.</p>
-          </section>
+          <div class="page-content page-content--careers">
+            <section class="careers-hero" aria-labelledby="careersTitle">
+              <div class="container">
+                <div class="row row--align-end careers-hero__row">
+                  <div class="col col-7 col-md-5 col-sm-4">
+                    <div class="careers-hero__main">
+                      <p class="careers-label">Careers</p>
+                      <h1 id="careersTitle">We value <span class="text-primary">talent &amp; passion</span></h1>
+                    </div>
+                  </div>
+                  <div class="col col-1 col-hide-md" aria-hidden="true"></div>
+                  <div class="col col-4 col-md-3 col-sm-4">
+                    <p class="careers-hero__lead">You thrive on Connect, Create, and Challenge?</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="text-marquee text-marquee--compact careers-marquee" aria-hidden="true">
+              <span class="text-marquee__track">
+                <span>Connect ✳ Create ✳ Challenge ✳ Keep Learning ✳</span>
+                <span>Connect ✳ Create ✳ Challenge ✳ Keep Learning ✳</span>
+              </span>
+            </div>
+
+            <section class="careers-jobs" aria-labelledby="careersJobsTitle">
+              <div class="container">
+                <header class="section-heading" data-careers-reveal>
+                  <p class="careers-label">Join Our Team</p>
+                  <h2 id="careersJobsTitle">We're looking for ...</h2>
+                </header>
+                <div class="row">
+                  <div class="col col-12 col-md-8 col-sm-4">
+                    <ul class="careers-job-grid" id="careersJobGrid" aria-live="polite"></ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="careers-culture" aria-labelledby="careersCultureTitle">
+              <div class="container">
+                <div class="row careers-culture__row">
+                  <div class="col col-4 col-md-3 col-sm-4" data-careers-reveal>
+                    <p class="careers-label">Life at Connect Vietnam</p>
+                    <h2 id="careersCultureTitle">Ideas grow when people do.</h2>
+                  </div>
+                  <div class="col col-2 col-hide-md" aria-hidden="true"></div>
+                  <div class="col col-6 col-md-5 col-sm-4" data-careers-reveal>
+                    <p class="careers-culture__body">At Connect Vietnam, we combine strategic thinking with creative execution. Our office culture is collaborative, fast-moving, and grounded in respect, where everyone is encouraged to bring ideas, take ownership, and keep learning.</p>
+                  </div>
+                </div>
+                <div class="row careers-culture__gallery" data-careers-reveal>
+                  <div class="col col-7 col-md-5 col-sm-4">
+                    <figure class="careers-culture__media careers-culture__media--wide">
+                      <img src="./assets/img/culture-creative-discussion.jpg" alt="Connect Vietnam team collaborating" loading="lazy" />
+                    </figure>
+                  </div>
+                  <div class="col col-5 col-md-3 col-sm-4">
+                    <figure class="careers-culture__media careers-culture__media--portrait">
+                      <img src="./assets/img/about-office.png" alt="Connect Vietnam office" loading="lazy" />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </main>
+
+      <div class="careers-drawer" id="careersDrawer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="careersDrawerTitle">
+        <button class="careers-drawer__overlay" type="button" aria-label="Close job details" data-careers-drawer-close></button>
+        <div class="careers-drawer__panel">
+          <button class="careers-drawer__close" type="button" aria-label="Close job details" data-careers-drawer-close><i class="ph ph-x" aria-hidden="true"></i></button>
+          <div id="careersDrawerContent"></div>
+        </div>
+      </div>
 
       <footer class="site-footer">
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false" data-menu-toggle>
@@ -66,7 +135,7 @@
             <li class="nav-item item-about"><a class="nav-link" href="./about-us.html"><span class="nav-link__text" data-text="About Us">About Us</span></a></li>
             <li class="nav-item item-brand"><a class="nav-link" href="./brand-solutions.html"><span class="nav-link__text" data-text="Brand Solutions">Brand <br /> Solutions</span></a></li>
             <li class="nav-item item-creations"><a class="nav-link" href="./creations-discover.html"><span class="nav-link__text" data-text="Creations Discover">Creations <br /> Discover</span></a></li>
-            <li class="nav-item item-careers"><a class="nav-link" href="./careers.html"><span class="nav-link__text" data-text="Carrers">Carrers</span></a></li>
+            <li class="nav-item item-careers"><a class="nav-link" href="./careers.html"><span class="nav-link__text" data-text="Careers">Careers</span></a></li>
             <li class="nav-item item-contact"><a class="nav-link" href="./contact.html"><span class="nav-link__text" data-text="Contact">Contact</span></a></li>
           </ul>
         </nav>
