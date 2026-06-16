@@ -45,6 +45,9 @@
       '<img class="hover-slideshow__image is-active" src="' +
       escapeHtml(project.image) +
       '" alt="" loading="lazy" />' +
+      '<span class="hover-slideshow__image" style="background:#c5bdb2;"></span>' +
+      '<span class="hover-slideshow__image" style="background:#8a9478;"></span>' +
+      '<span class="hover-slideshow__image" style="background:#6b7e8f;"></span>' +
       '</span></span>' +
       '<div class="creations-project__foot">' +
       '<div class="creations-project__meta">' +
