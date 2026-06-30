@@ -491,11 +491,11 @@
       var sw = stage.clientWidth;
       var sh = stage.clientHeight;
       return [
-        { x: sw * 0.5,          y: sh * 0.5,  scale: 1, blur: 0,  opacity: 1    },
-        { x: sw * 1 + sw * 0.33, y: sh * 1.15, scale: 1, blur: 90, opacity: 0.18 },
-        { x: sw * 2 + sw * 0.5,  y: sh * -0.09, scale: 1, blur: 90, opacity: 0.18 },
-        { x: sw * 3 + sw * 0.5,  y: sh * 0.82, scale: 1, blur: 90, opacity: 0.18 },
-        { x: sw * 4 + sw * 0.82, y: sh * -0.3,  scale: 1, blur: 90, opacity: 0.18 },
+        { x: sw * 0.58,          y: sh * 0.5,   scale: 1,   blur: 0,  opacity: 1    },
+        { x: sw * 1 + sw * 0.33, y: sh * 1.15,  scale: 4/3, blur: 90, opacity: 0.18 },
+        { x: sw * 2 + sw * 0.5,  y: sh * -0.09, scale: 4/3, blur: 90, opacity: 0.18 },
+        { x: sw * 3 + sw * 0.5,  y: sh * 0.82,  scale: 4/3, blur: 90, opacity: 0.18 },
+        { x: sw * 4 + sw * 0.82, y: sh * -0.3,  scale: 4/3, blur: 90, opacity: 0.18 },
       ];
     }
 
@@ -504,7 +504,7 @@
     window.gsap.set(orb, {
       xPercent: -50,
       yPercent: -50,
-      x: sw0 * 0.5,
+      x: sw0 * 0.55,
       y: sh0 * 0.5,
       scale: 0.08,
       filter: "blur(0px)",

@@ -22,10 +22,10 @@
 }
 
 .frontpage-grid {
-  --frontpage-grid-h1: clamp(88px, min(9vw, 17vh), 144px);
-  --frontpage-grid-h2: clamp(44px, min(4.4vw, 8vh), 64px);
-  --frontpage-grid-h3: clamp(28px, min(2.6vw, 5vh), 40px);
-  --frontpage-grid-h4: clamp(20px, min(1.6vw, 3.2vh), 26px);
+  --frontpage-grid-h1: clamp(42px, 5.9vw, 112px);
+  --frontpage-grid-h2: clamp(29px, 4.1vw,  77px);
+  --frontpage-grid-h3: clamp(20px, 2.8vw,  53px);
+  --frontpage-grid-h4: clamp(15px, 1.9vw,  37px);
 
   position: relative;
   display: grid;
@@ -86,11 +86,11 @@
    Screen 1
    ========================================================================== */
 
-/* Screen 1 — large hero headings (override default grid h1 scale) */
+/* Screen 1 — hero heading specifics */
 .frontpage-grid .screen-1 h1 {
-  font-size: clamp(52px, 7.5vw, 143px);
   line-height: 0.88;
   white-space: nowrap;
+  letter-spacing: 0.04em;
 }
 
 /* Orb — absolute overlay across full grid; JS drives all motion */
@@ -106,7 +106,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 60vh;
+  width: 25vw;
   aspect-ratio: 1;
   background: var(--color-primary);
   border-radius: 50%;
@@ -118,6 +118,10 @@
 }
 
 /* Photos */
+.frontpage-grid .grid-item--stretch {
+  overflow: hidden;
+}
+
 .fp-photo {
   display: block;
   width: 100%;
@@ -140,20 +144,36 @@
   font-weight: 500;
 }
 
+@keyframes fp-wipe-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
 /* Center text group on the orb */
 .fp-center-group {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-size: var(--frontpage-grid-h3);
+  gap: 8px;
+  font-size: var(--frontpage-grid-h4);
   line-height: 1;
-  padding-left: 1.4vw;
+  padding-left:1.5vw
 }
+
+.fp-center-group span {
+  display: block;
+  clip-path: inset(0 100% 0 0);
+  animation: fp-wipe-in 0.65s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.fp-center-group span:nth-child(1) { animation-delay: 0.5s; }
+.fp-center-group span:nth-child(2) { animation-delay: 0.72s; }
+.fp-center-group span:nth-child(3) { animation-delay: 0.94s; }
+.fp-center-group span:nth-child(4) { animation-delay: 1.16s; }
 
 .fp-we {
   font-size: var(--frontpage-grid-h4);
   font-weight: 400;
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0.1em;
 }
 
@@ -322,8 +342,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.5em 2em 2em;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65));
+  padding: 1.25rem 2rem 1.25rem;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
   color: white;
 }
 
@@ -335,7 +355,8 @@
   margin-bottom: 0.3em;
 }
 
-.fp-project-title {
+.frontpage-grid .fp-project-title {
+  font-size: var(--frontpage-grid-h4);
   font-weight: 700;
   line-height: 1.1;
   color: white;
@@ -380,11 +401,12 @@
    ========================================================================== */
 
 .fp-s5-bottom {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 1.5em 1.5em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5em;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.75) 0%, transparent 100%);
 }
 
 .fp-s5-watermark {
@@ -415,6 +437,10 @@
   font-size: calc(var(--frontpage-grid-h4) * 0.75);
   color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
+}
+
+.fp-s5-count {
+  color: #000;
 }
 
 .fp-s5-right {
