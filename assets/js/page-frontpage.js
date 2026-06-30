@@ -11,38 +11,16 @@
 
     var heroTimeline = window.gsap.timeline({
       paused: true,
-      defaults: {
-        duration: 0.75,
-        ease: "power3.out",
-      },
+      defaults: { duration: 0.75, ease: "power3.out" },
     });
 
     heroTimeline
-      .from(".home-mobile__hero .home-mobile__section-sub-title", {
-        autoAlpha: 0,
-        y: 24,
-      })
-      .from(
-        ".home-mobile__hero-title",
-        {
-          autoAlpha: 0,
-          yPercent: 35,
-          duration: 0.9,
-        },
-        "-=0.48",
-      )
-      .from(
-        ".home-mobile__hero .home-mobile__section-content",
-        {
-          autoAlpha: 0,
-          y: 32,
-        },
-        "-=0.5",
-      );
+      .from(".fp-mobile__hero .fp-mobile__kicker", { autoAlpha: 0, y: 20 })
+      .from(".fp-mobile__hero-title", { autoAlpha: 0, yPercent: 30, duration: 0.9 }, "-=0.45")
+      .from(".fp-mobile__hero-sub", { autoAlpha: 0, y: 24 }, "-=0.5")
+      .from(".fp-mobile__hero-tagline", { autoAlpha: 0, y: 20 }, "-=0.4");
 
-    function revealHero() {
-      heroTimeline.play();
-    }
+    function revealHero() { heroTimeline.play(); }
 
     if (window.CNVNPageRevealed) {
       revealHero();
@@ -50,91 +28,65 @@
       window.addEventListener("cnvn:page-revealed", revealHero, { once: true });
     }
 
-    document.querySelectorAll(".home-mobile__heading").forEach(function (heading) {
+    document.querySelectorAll(".fp-mobile__heading").forEach(function (heading) {
       window.gsap.from(heading.children, {
         autoAlpha: 0,
-        y: 36,
-        duration: 0.75,
-        stagger: 0.12,
+        y: 32,
+        duration: 0.7,
+        stagger: 0.11,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: heading,
-          start: "top 84%",
-          once: true,
-        },
+        scrollTrigger: { trigger: heading, start: "top 84%", once: true },
       });
     });
 
-    document.querySelectorAll(".home-mobile__service-card").forEach(function (card, index) {
+    document.querySelectorAll(".fp-mobile__service-card").forEach(function (card, index) {
       window.gsap.from(card, {
         autoAlpha: 0,
-        x: index % 2 === 0 ? -28 : 28,
-        y: 24,
-        duration: 0.7,
+        x: index % 2 === 0 ? -24 : 24,
+        y: 20,
+        duration: 0.65,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: card,
-          start: "top 92%",
-          once: true,
-        },
+        scrollTrigger: { trigger: card, start: "top 92%", once: true },
       });
     });
 
-    document.querySelectorAll(".home-mobile__work-images img").forEach(function (image) {
-      window.gsap.from(image, {
+    document.querySelectorAll(".fp-mobile__work-card").forEach(function (card) {
+      window.gsap.from(card, {
         clipPath: "inset(0 0 100% 0)",
-        scale: 1.08,
+        scale: 1.06,
         duration: 1,
         ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: image,
-          start: "top 88%",
-          once: true,
-        },
+        scrollTrigger: { trigger: card, start: "top 88%", once: true },
       });
     });
 
-    window.gsap.from(".home-mobile__about-image", {
-      clipPath: "inset(0 0 18% 0)",
-      scale: 1.08,
+    window.gsap.from(".fp-mobile__about-image", {
+      clipPath: "inset(0 0 16% 0)",
+      scale: 1.06,
       duration: 1.1,
       ease: "power3.inOut",
-      scrollTrigger: {
-        trigger: ".home-mobile__about-image",
-        start: "top 86%",
-        once: true,
-      },
+      scrollTrigger: { trigger: ".fp-mobile__about-image", start: "top 86%", once: true },
     });
 
-    window.gsap.from(".home-mobile__about-copy", {
+    window.gsap.from(".fp-mobile__about-copy", {
       autoAlpha: 0,
-      y: 56,
-      duration: 0.85,
+      y: 48,
+      duration: 0.8,
       ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".home-mobile__about-copy",
-        start: "top 88%",
-        once: true,
-      },
+      scrollTrigger: { trigger: ".fp-mobile__about-copy", start: "top 88%", once: true },
     });
 
-    document.querySelectorAll(".home-mobile__cta, .home-mobile__about-footer").forEach(function (target) {
+    document.querySelectorAll(".fp-mobile__cta, .fp-mobile__about-footer").forEach(function (target) {
       window.gsap.from(target, {
         autoAlpha: 0,
-        y: 28,
-        duration: 0.7,
+        y: 24,
+        duration: 0.65,
         ease: "power3.out",
-        scrollTrigger: {
-          trigger: target,
-          start: "top 92%",
-          once: true,
-        },
+        scrollTrigger: { trigger: target, start: "top 92%", once: true },
       });
     });
 
-    window.addEventListener("load", function () {
-      window.ScrollTrigger.refresh();
-    });
+    window.addEventListener("load", function () { window.ScrollTrigger.refresh(); });
   }
 
   if (window.matchMedia("(max-width: 767px)").matches) {
