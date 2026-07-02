@@ -59,11 +59,11 @@
       '<h2 class="creations-project__title">' +
       escapeHtml(project.title) +
       '</h2>' +
-      '</div>' +
-      '<div class="creations-project__info">' +
       '<span class="creations-project__desc">' +
       escapeHtml(project.description) +
       '</span>' +
+      '</div>' +
+      '<div class="creations-project__info">' +
       '<span class="creations-project__fact"><span class="text-sm">Client</span><strong>' +
       escapeHtml(project.client) +
       '</strong></span>' +

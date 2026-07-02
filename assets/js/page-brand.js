@@ -45,20 +45,17 @@
     if (!list) return;
 
     list.innerHTML = brandData.shifts
-      .map(function (shift, index) {
-        var number = String(index + 1).padStart(2, "0");
+      .map(function (shift) {
         return (
           '<li class="brand-shift" data-brand-reveal><button class="brand-shift__button" type="button" aria-pressed="false">' +
-          '<span class="brand-shift__inner"><span class="brand-shift__face brand-shift__front"><span class="brand-shift__number">' +
-          number +
-          '</span><span class="brand-shift__copy">' +
+          '<span class="brand-shift__inner"><span class="brand-shift__face brand-shift__front"><span class="brand-shift__number"><i class="ph ph-question" aria-hidden="true"></i></span>' +
+          '<span class="brand-shift__copy">' +
           escapeHtml(shift.from) +
           " - " +
           escapeHtml(shift.to) +
           '</span><i class="ph ph-arrow-up-right brand-shift__arrow" aria-hidden="true"></i></span>' +
-          '<span class="brand-shift__face brand-shift__back"><span class="brand-shift__number">' +
-          number +
-          '</span><span class="brand-shift__copy">' +
+          '<span class="brand-shift__face brand-shift__back"><span class="brand-shift__number"><i class="ph ph-lightbulb" aria-hidden="true"></i></span>' +
+          '<span class="brand-shift__copy">' +
           escapeHtml(shift.detail) +
           '</span><i class="ph ph-arrow-down-left brand-shift__arrow" aria-hidden="true"></i></span></span></button></li>'
         );

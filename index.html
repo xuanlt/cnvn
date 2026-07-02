@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="./assets/vendor/overlayscrollbars/overlayscrollbars.min.css" />
     <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/frontpage.css" />
   </head>
 
-  <body class="page-home is-page-loading">
+  <body class="page-frontpage is-page-loading">
     <!-- BEGIN Site -->
     <div class="site">
       <!-- BEGIN Site Header -->
@@ -49,295 +50,297 @@
 
       <!-- BEGIN Site Main -->
       <main class="site-main" id="siteMain">
-        <section class="home-stage" aria-label="Connect Vietnam introduction">
-          <div class="home-grid grid-background--rows-4">
-            <!-- BEGIN Home Grid Screen 1 -->
-            <div class="grid-item grid-item--stretch screen-1 col-9 row-1 span-1" aria-hidden="true">
-              <div class="red-block"></div>
-            </div>
-            <div class="grid-item grid-item--stretch screen-1 col-1 row-3 row-span-4 span-1" aria-hidden="true">
-              <div class="red-block"></div>
-            </div>
-            <div class="grid-item grid-item--stretch screen-1 col-11 row-7 row-span-2 span-3" aria-hidden="true">
-              <div class="red-block"></div>
+        <section class="frontpage-stage" aria-label="Connect Vietnam introduction">
+          <div class="frontpage-grid grid-background--rows-4">
+
+            <!-- Orb — spans all screens via absolute positioning -->
+            <div class="fp-orb-container" aria-hidden="true">
+              <div class="fp-orb"></div>
             </div>
 
-            <!-- <div class="grid-item grid-item--stretch screen-1 col-1 row-7 row-span-2 span-10 hover-slideshow" role="button" tabindex="0" aria-label="Preview impacts" data-hover-slideshow data-slideshow-interval="1000">
-              <div class="hover-slideshow__slides">
-                <img class="hover-slideshow__image is-active" src="./assets/img/project-cbr.jpg" alt="" />
-                <img class="hover-slideshow__image" src="./assets/img/project-navro.jpg" alt="" />
-                <img class="hover-slideshow__image" src="./assets/img/culture-creative-discussion.jpg" alt="" />
-                <img class="hover-slideshow__image" src="./assets/img/service-market-research.jpg" alt="" />
-              </div>
-              <div class="hover-slideshow__veil"></div>
-            </div> -->
+            <!-- Screen 1 -->
 
-            <div class="grid-item screen-1 col-3 row-2 span-6">
-              <p class="h3 text-black text-uppercase text-medium text-flat">Make Real</p>
+            <div class="grid-item grid-item--stretch screen-1 col-2 row-2 row-span-1 span-1 fp-accent-block" aria-hidden="true"></div>
+
+            <div class="grid-item grid-item--stretch screen-1 col-11 row-1 row-span-2 span-2" aria-hidden="true">
+              <img class="fp-photo" src="./assets/img/s1-building.jpg" alt="" />
             </div>
 
-            <div class="grid-item screen-1 col-3 row-3 row-span-2 span-6">
-              <h1 class="text-black text-uppercase text-bold text-flat">Impacts</h1>
+            <div class="grid-item screen-1 col-2 row-4 row-span-2 span-4 text-center">
+              <h1 class="text-black text-uppercase text-bold text-flat">Make Real <br />Impacts</h1>
             </div>
 
-            <div class="grid-item screen-1 col-5 row-5 row-span-2 span-8">
-              <p class="text-inline-statement h2 scroll-parallax text-black text-uppercase text-normal text-flat">
-                We <strong class="text-primary text-normal">Create</strong> <strong class="text-primary text-normal">Challenge</strong> <strong class="text-primary text-normal">Connect</strong>
-              </p>
-              <p class="h3 scroll-parallax text-black text-uppercase text-normal text-flat">to accelerate your Growth</p>
-            </div>
-            <!-- END Home Grid Screen 1 -->
-
-            <!-- BEGIN Home Grid Screen 2 -->
-            <div class="grid-item grid-item--stretch screen-2 col-8 row-8 span-4" aria-hidden="true">
-              <div class="red-block"></div>
-            </div>
-            <div class="grid-item screen-2 col-1 row-3 row-span-2 span-3">
-              <p class="h4 text-muted text-uppercase text-flat text-bold letter-spaceing-wide">
-                Everything Start<br />
-                with a .
+            <div class="grid-item screen-1 col-7 row-3 row-span-4 span-2">
+              <p class="fp-center-group text-white text-uppercase text-flat">
+                <span class="fp-we">We</span>
+                <span>Create</span>
+                <span>Challenge</span>
+                <span>Connect</span>
               </p>
             </div>
-            <div class="grid-item screen-2 col-3 row-5 row-span-2 span-6">
-              <p class="h3 scroll-parallax text-black text-uppercase text-normal text-flat">We connect the dots & convertstrategy to prosperity</p>
+
+            <div class="grid-item screen-1 col-8 row-4 row-span-2 span-5 text-center">
+              <p class="fp-kicker">To accelerate your</p>
+              <h1 class="text-black text-uppercase text-bold text-flat">Gr<span class="text-primary">o</span>wth</h1>
             </div>
 
-            <div class="grid-item screen-2 col-8 row-8  span-4" style="z-index: 20">
-              <div class="text-center">
-                <a class="stroke-link stroke-link--light h4 text-uppercase text-normal" href="./brand-solutions.html">
-                  <span class="stroke-link__label">Solutions</span>
-                  <svg class="stroke-link__stroke" viewBox="0 0 220 80" aria-hidden="true">
-                    <path pathLength="1" d="M 18 27 C 2 40 10 59 52 64 C 110 70 184 54 203 21" />
-                  </svg>
-                </a>
+            <div class="grid-item grid-item--stretch screen-1 col-1 row-7 row-span-2 span-3" aria-hidden="true">
+              <img class="fp-photo" src="./assets/img/s1-group-office.jpg" alt="" />
+            </div>
+
+            <div class="grid-item screen-1 col-11 row-7 row-span-2 span-2">
+              <button class="fp-scroll-btn" type="button" aria-label="Scroll to next section" data-fp-scroll-next>
+                <span>Scroll</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Screen 2 -->
+
+            <!-- Heading -->
+            <div class="grid-item screen-2 col-2 row-1 row-span-2 span-6">
+              <h3 class="fp-s2-heading text-black text-uppercase text-bold text-flat">
+                Everything Starts<br>With A <span class="fp-s2-dot" aria-hidden="true"></span>
+              </h3>
+            </div>
+
+            <!-- Tagline -->
+            <div class="grid-item screen-2 col-8 row-1 row-span-2 span-4">
+              <p class="fp-s2-tagline">We connect the dots and<br> convert strategy to prosperity</p>
+            </div>
+
+            <!-- Services grid: col-2 span-10, row-3 row-span-4, inner 3-col × 2-row -->
+            <div class="grid-item grid-item--stretch screen-2 col-2 row-3 row-span-4 span-10 fp-services-grid" data-fp-cards>
+
+              <div class="fp-service-card">
+                <i class="ph ph-chart-line-up fp-service-icon" aria-hidden="true"></i>
+                <h4 class="fp-service-title text-uppercase">Market Research &amp;<br>Entry Strategy</h4>
+                <p class="fp-service-desc">Decode insights &amp; market trends to shape winning strategies</p>
               </div>
-            </div>
 
-            <div class="grid-item grid-item--stretch screen-2 col-5 row-1 row-span-4 span-4">
-              <div class="service-slot">
-                <article class="service-card service-card--vector service-card--full">
-                  <div class="service-card__media">
-                    <img class="service-card__image service-card__image--vector" src="./assets/img/service-market-research-minimal.svg" alt="Minimal upward trend illustration" />
-                  </div>
-                  <span class="service-card__number" aria-hidden="true">01</span>
-                  <h3 class="service-card__title text-black text-uppercase text-bold text-flat">Market research &amp; Entry Strategy</h3>
-                </article>
+              <div class="fp-service-card">
+                <i class="ph ph-megaphone-simple fp-service-icon" aria-hidden="true"></i>
+                <h4 class="fp-service-title text-uppercase">Brand Building &amp;<br>Public Relations</h4>
+                <p class="fp-service-desc">Build brands and spark meaningful engagement</p>
               </div>
-            </div>
 
-            <div class="grid-item grid-item--stretch screen-2 col-11 row-1 row-span-4 span-3">
-              <div class="service-slot">
-                <article class="service-card service-card--vector">
-                  <div class="service-card__media">
-                    <img class="service-card__image service-card__image--vector" src="./assets/img/service-public-relations-minimal.svg" alt="Minimal megaphone illustration" />
-                  </div>
-                  <span class="service-card__number" aria-hidden="true">02</span>
-                  <h3 class="service-card__title h4 text-black text-uppercase text-bold text-flat">Brand building &amp; Public relations</h3>
-                </article>
+              <div class="fp-service-card">
+                <i class="ph ph-globe fp-service-icon" aria-hidden="true"></i>
+                <h4 class="fp-service-title text-uppercase">Product Marketing &amp;<br>Localization</h4>
+                <p class="fp-service-desc">Refine your product stories for the target market</p>
               </div>
-            </div>
-            
-            <!-- END Home Grid Screen 2 -->
 
-            <!-- BEGIN Home Grid Screen 3 -->
-
-            <div class="grid-item grid-item--stretch screen-3 col-3 row-5 row-span-4 span-3">
-              
-              <div class="service-slot">
-                <article class="service-card service-card--vector">
-                  <div class="service-card__media">
-                    <img class="service-card__image service-card__image--vector" src="./assets/img/service-localization-minimal.svg" alt="Minimal globe illustration" />
-                  </div>
-                  <span class="service-card__number" aria-hidden="true">03</span>
-                  <h3 class="service-card__title h4 text-black text-uppercase text-bold text-flat">Product marketing &amp; Localization</h3>
-                </article>
+              <div class="fp-service-card">
+                <i class="ph ph-briefcase fp-service-icon" aria-hidden="true"></i>
+                <h4 class="fp-service-title text-uppercase">Market Access &amp;<br>Partnership</h4>
+                <p class="fp-service-desc">Unlock opportunities and build meaningful partnerships</p>
               </div>
-            </div>
 
-            <div class="grid-item grid-item--stretch screen-3 col-4 row-1 row-span-4 span-3">
-              <div class="service-slot">
-                <article class="service-card service-card--vector">
-                  <div class="service-card__media">
-                    <img class="service-card__image service-card__image--vector" src="./assets/img/service-market-access-minimal.svg" alt="Minimal partnership illustration" />
-                  </div>
-                  <span class="service-card__number" aria-hidden="true">04</span>
-                  <h3 class="service-card__title h4 text-black text-uppercase text-bold text-flat">Market access &amp; Partnership</h3>
-                </article>
+              <div class="fp-service-card">
+                <i class="ph ph-bank fp-service-icon" aria-hidden="true"></i>
+                <h4 class="fp-service-title text-uppercase">Government &amp;<br>Institutional Relations</h4>
+                <p class="fp-service-desc">Establish key relationships</p>
               </div>
-            </div>
 
-            <div class="grid-item grid-item--stretch screen-3 col-8 row-5 row-span-4 span-3">
-              <div class="service-slot">
-                <article class="service-card service-card--vector">
-                  <div class="service-card__media">
-                    <img class="service-card__image service-card__image--vector" src="./assets/img/service-government-relations-minimal.svg" alt="Minimal institution illustration" />
-                  </div>
-                  <span class="service-card__number" aria-hidden="true">05</span>
-                  <h3 class="service-card__title h4 text-black text-uppercase text-bold text-flat">Government &amp; Institutional relations</h3>
-                </article>
+              <div class="fp-service-card">
+                <i class="ph ph-binoculars fp-service-icon" aria-hidden="true"></i>
+                <h4 class="fp-service-title text-uppercase">Ongoing Market<br>Intelligence &amp; Support</h4>
+                <p class="fp-service-desc">Ensure your long-term presence and growth</p>
               </div>
+
             </div>
 
-            <div class="grid-item grid-item--stretch screen-3 col-9 row-1 row-span-4 span-3">
-              
-              <div class="service-slot">
-                <article class="service-card service-card--vector">
-                  <div class="service-card__media">
-                    <img class="service-card__image service-card__image--vector" src="./assets/img/service-market-intelligence-minimal.svg" alt="Minimal market intelligence illustration" />
-                  </div>
-                  <span class="service-card__number" aria-hidden="true">06</span>
-                  <h3 class="service-card__title h4 text-black text-uppercase text-bold text-flat">Ongoing market Intelligence &amp; support</h3>
-                </article>
-              </div>
-            </div>
-            
-
-            
-            <!-- END Home Grid Screen 3 -->
-
-            <!-- BEGIN Home Grid Screen 4 -->
-            <div class="grid-item screen-4 col-3 row-2 span-4">
-              <p class="h4 text-muted text-uppercase text-bold text-flat letter-spaceing-wide">From . to Story</p>
+            <!-- Scroll button -->
+            <div class="grid-item screen-2 col-11 row-7 row-span-2 span-2">
+              <button class="fp-scroll-btn" type="button" aria-label="Scroll to next section" data-fp-scroll-next>
+                <span>Scroll</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </div>
 
-            <div class="grid-item screen-4 col-3 row-3 row-span-4 span-4" style="z-index: 20">
-                <p class="h4 text-black text-uppercase text-normal text-flat">We transform tiny dots into</p>
-                <p class="h1 text-primary text-uppercase text-bold text-flat">Powerful<br />Impacts</p>
+            <!-- Screen 3 -->
+
+            <!-- "FROM • TO STORY" kicker -->
+            <div class="grid-item screen-3 col-2 row-1 row-span-2 span-5">
+              <p class="fp-kicker fp-s3-kicker text-uppercase text-bold">
+                From <span class="fp-s2-dot" aria-hidden="true"></span> To Stories
+              </p>
             </div>
 
-            <div class="grid-item grid-item--stretch screen-4 col-1 row-1 span-1" aria-hidden="true" style="z-index: 10">
-              <div class="red-block"></div>
+
+            <!-- Hero heading -->
+            <div class="grid-item screen-3 col-2 row-3 row-span-4 span-6" style="z-index: 209;">
+              <p class="fp-kicker">We transform tiny dots into</p>
+              <h1 class="fp-s3-hero text-uppercase text-bold text-flat">Powerful<br>Impacts</h1>
             </div>
 
-            <div class="grid-item grid-item--stretch screen-4 col-3 row-8 span-6" aria-hidden="true" style="z-index: 10">
-              <div class="red-block"></div>
+            <!-- Scroll button -->
+            <div class="grid-item screen-3 col-5 row-7 row-span-2 span-3">
+              <button class="fp-scroll-btn" type="button" aria-label="Scroll to next section" data-fp-scroll-next>
+                <span>Scroll</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </div>
 
-            <div class="grid-item screen-4 col-3 row-8 span-6" style="z-index: 20">
-              <div class="text-center">
-                <a class="stroke-link stroke-link--light h4 text-uppercase text-normal" href="./creations-discover.html">
-                  <span class="stroke-link__label">Our Works</span>
-                  <svg class="stroke-link__stroke" viewBox="0 0 220 80" aria-hidden="true">
-                    <path pathLength="1" d="M 18 27 C 2 40 10 59 52 64 C 110 70 184 54 203 21" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="grid-item grid-item--stretch screen-4 col-8 row-1 row-span-4 span-5">
-              <div class="story-media story-media--top hover-slideshow" tabindex="0" aria-label="Preview featured work" data-hover-slideshow data-slideshow-interval="900">
-                <div class="hover-slideshow__slides">
-                  <img class="hover-slideshow__image is-active" src="./assets/img/project-navro.jpg" alt="" />
-                  <img class="hover-slideshow__image" src="./assets/img/culture-creative-discussion.jpg" alt="" />
-                  <img class="hover-slideshow__image" src="./assets/img/service-public-relations.jpg" alt="" />
+            <!-- Project card 1 -->
+            <div class="grid-item grid-item--stretch screen-3 col-7 row-1 row-span-8 span-6">
+              <div class="fp-project-card">
+                <img class="fp-project-img" src="./assets/img/project-navro.jpg" alt="" />
+                <div class="fp-project-info">
+                  <p class="fp-project-label">01. Case Study</p>
+                  <h3 class="fp-project-title text-uppercase">Navro Market Debut</h3>
+                  <hr class="fp-project-divider" />
+                  <p class="fp-project-desc">A clean launch story for a new market entrant, built around visibility, trust, and local relevance.</p>
                 </div>
               </div>
             </div>
-            <div class="grid-item grid-item--stretch screen-4 col-8 row-5 row-span-4 span-5">
-              <div class="story-media story-media--bottom hover-slideshow" tabindex="0" aria-label="Preview featured work" data-hover-slideshow data-slideshow-interval="900">
-                <div class="hover-slideshow__slides">
-                  <img class="hover-slideshow__image is-active" src="./assets/img/project-cbr.jpg" alt="" />
-                  <img class="hover-slideshow__image" src="./assets/img/service-market-research.jpg" alt="" />
-                  <img class="hover-slideshow__image" src="./assets/img/service-localization.jpg" alt="" />
+
+            <!-- Screen 4 -->
+
+            <!-- Project card 2: CBR Story Grid (top half) -->
+            <div class="grid-item grid-item--stretch screen-4 col-1 row-1 row-span-4 span-5">
+              <div class="fp-project-card">
+                <img class="fp-project-img" src="./assets/img/project-cbr.png" alt="" />
+                <div class="fp-project-info">
+                  <p class="fp-project-label">02. Case Study</p>
+                  <h3 class="fp-project-title text-uppercase">CBR Story Grid</h3>
                 </div>
               </div>
             </div>
-            <!-- END Home Grid Screen 4 -->
 
-            <!-- BEGIN Home Grid Screen 5 -->
-            <div class="grid-item grid-item--stretch screen-5 col-2 row-1 row-span-6 span-5" aria-hidden="true">
-              <div class="identity-media">
-                <img class="identity-media__image" src="./assets/img/culture-creative-discussion.jpg" alt="" />
+            <!-- Project card 3: Culture Pop-up Lab (bottom half) -->
+            <div class="grid-item grid-item--stretch screen-4 col-1 row-5 row-span-4 span-5">
+              <div class="fp-project-card">
+                <img class="fp-project-img" src="./assets/img/project-culture.jpg" alt="" />
+                <div class="fp-project-info">
+                  <p class="fp-project-label">03. Case Study</p>
+                  <h3 class="fp-project-title text-uppercase">Culture Pop-up Lab</h3>
+                </div>
               </div>
             </div>
 
-            <div class="grid-item grid-item--stretch screen-5 col-6 row-3 row-span-2 span-7" aria-hidden="true">
-              <div class="red-block"></div>
+            <!-- Kicker -->
+            <div class="grid-item screen-4 col-7 row-1 row-span-2 span-6">
+              <p class="fp-kicker fp-s4-kicker text-uppercase text-bold">
+                Behind The <span class="fp-s2-dot" aria-hidden="true"></span>
+              </p>
             </div>
 
-            <div class="grid-item screen-5 col-8 row-2 span-4">
-              <p class="h4 text-muted text-bold text-uppercase text-flat letter-spaceing-wide">Behind the dot</p>
+            <!-- Hero: WE ARE / CONNECT VIETNAM -->
+            <div class="grid-item screen-4 col-7 row-3 row-span-3 span-6">
+              <p class="fp-s4-we-are h3 text-uppercase text-bold">We Are</p>
+              <h2 class="fp-s4-hero h1 text-uppercase text-bold text-flat">Connect<br>Vietnam</h2>
             </div>
 
-            <div class="grid-item screen-5 col-8 row-3 row-span-2 span-5">
-              <h2 class="text-white text-uppercase text-bold text-flat">We are<br />Connect Vietnam</h2>
-            </div>
-            <div class="grid-item screen-5 col-8 row-5 row-span-2 span-4">
-              <p class="h3 text-black text-uppercase text-normal text-flat">
-                  We challenge <br /><strong class="text-primary text-normal">limits, elevate visions</strong> &amp; <strong class="text-primary text-normal">spark opportunities</strong>
-                </p>
+            <!-- Tagline -->
+            <div class="grid-item screen-4 col-7 row-6 row-span-2 span-5">
+              <p class="fp-s4-tagline h4 text-uppercase">We challenge limits, elevate visions &amp; spark opportunities</p>
             </div>
 
-
-            <div class="grid-item grid-item--stretch screen-5 col-1 row-8 span-2" aria-hidden="true">
-              <div class="red-block"></div>
+            <!-- Scroll button -->
+            <div class="grid-item screen-4 col-11 row-7 row-span-2 span-2">
+              <button class="fp-scroll-btn" type="button" aria-label="Scroll to next section" data-fp-scroll-next>
+                <span>Scroll</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </div>
 
-            <div class="grid-item screen-5 col-4 row-8 span-5">
-              <p class="h4 text-black text-uppercase text-normal text-flat">Ready to make <strong>Real Impacts</strong></p>
+            <!-- Screen 5 -->
+
+            <!-- Left: full-height office photo -->
+            <div class="grid-item grid-item--stretch screen-5 col-1 row-1 row-span-8 span-6">
+              <img class="fp-photo" src="./assets/img/office-reception.png" alt="" />
+              <div class="fp-s5-bottom">
+                <div class="fp-s5-stats">
+                  <div class="fp-s5-stat">
+                    <strong class="h2 text-bold fp-s5-count" data-count="10">10+</strong>
+                    <span class="fp-s5-stat-label text-uppercase">Year in Market</span>
+                  </div>
+                  <div class="fp-s5-stat">
+                    <strong class="h2 text-bold fp-s5-count" data-count="35">35+</strong>
+                    <span class="fp-s5-stat-label text-uppercase">Brand Launched</span>
+                  </div>
+                  <div class="fp-s5-stat">
+                    <strong class="h2 text-bold fp-s5-count" data-count="23">23+</strong>
+                    <span class="fp-s5-stat-label text-uppercase">Members</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="grid-item screen-5 col-10 row-8 span-3 text-center">
-              <p class="text-center h4 text-black text-uppercase text-normal text-flat">
-                <a class="stroke-link stroke-link--dark" href="./contact.html">
-                  <span class="stroke-link__label">Connect</span>
-                  <svg class="stroke-link__stroke" viewBox="0 0 180 80" aria-hidden="true">
-                    <path pathLength="1" d="M 16 27 C 2 39 8 58 43 63 C 88 69 148 54 166 22" />
-                  </svg>
-                </a>
-              </p> 
+            <!-- Right: heading + CTA -->
+            <div class="grid-item screen-5 col-7 row-3 row-span-5 span-6 fp-s5-right">
+              <p class="fp-s5-sub h3 text-bold text-uppercase">Ready to Make</p>
+              <h2 class="fp-s5-hero text-bold text-uppercase text-flat">Real Impacts?</h2>
+              <a class="fp-s5-cta  text-bold text-uppercase" href="./contact.html">
+                Connect
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
             </div>
-            <!-- END Home Grid Screen 5 -->
+
           </div>
         </section>
 
-        <!-- BEGIN Home Mobile -->
-        <div class="home-mobile" aria-label="Connect Vietnam introduction">
-          <section class="home-mobile__hero">
-            <p class="home-mobile__kicker home-mobile__section-sub-title">Make Real</p>
-            <h1 class="home-mobile__hero-title">Impacts</h1>
-            <p class="home-mobile__section-content">We <strong class="text-primary">Create</strong> <strong class="text-primary">Challenge</strong> <strong class="text-primary">Connect</strong> to accelerate your growth</p>
+        <!-- BEGIN Frontpage Mobile (≤767px) -->
+        <div class="fp-mobile" aria-label="Connect Vietnam introduction">
+
+          <!-- Hero -->
+          <section class="fp-mobile__hero">
+            <p class="fp-mobile__kicker">Make Real</p>
+            <h1 class="fp-mobile__hero-title">Impacts</h1>
+            <p class="fp-mobile__hero-sub">to accelerate your <strong>Growth</strong></p>
+            <p class="fp-mobile__hero-tagline text-uppercase">We <strong>Create</strong> <strong>Challenge</strong> <strong>Connect</strong></p>
           </section>
 
-          <section class="home-mobile__section home-mobile__services">
-            <header class="home-mobile__heading">
-              <p class="home-mobile__kicker home-mobile__section-sub-title">Everything starts<br/>with a .</p>
-              <p class="home-mobile__section-title">We connect the dots and convert strategy to prosperity.</p>
+          <!-- Services -->
+          <section class="fp-mobile__section fp-mobile__services">
+            <header class="fp-mobile__heading">
+              <p class="fp-mobile__kicker">Everything starts with a <span class="fp-s2-dot" aria-hidden="true"></span></p>
+              <p class="fp-mobile__section-title">We connect the dots and convert strategy to prosperity.</p>
             </header>
-
-            <div class="home-mobile__service-list">
-              <article class="home-mobile__service-card">
-                <span>01</span>
-                <img src="./assets/img/service-market-research-minimal.svg" alt="" />
-                <h3>Market research &amp; Entry Strategy</h3>
+            <div class="fp-mobile__service-list">
+              <article class="fp-mobile__service-card">
+                <span class="fp-mobile__service-num">01</span>
+                <i class="ph ph-chart-line-up fp-mobile__service-icon" aria-hidden="true"></i>
+                <h3>Market Research &amp; Entry Strategy</h3>
               </article>
-              <article class="home-mobile__service-card">
-                <span>02</span>
-                <img src="./assets/img/service-public-relations-minimal.svg" alt="" />
-                <h3>Brand building &amp; Public relations</h3>
+              <article class="fp-mobile__service-card">
+                <span class="fp-mobile__service-num">02</span>
+                <i class="ph ph-megaphone-simple fp-mobile__service-icon" aria-hidden="true"></i>
+                <h3>Brand Building &amp; Public Relations</h3>
               </article>
-              <article class="home-mobile__service-card">
-                <span>03</span>
-                <img src="./assets/img/service-localization-minimal.svg" alt="" />
-                <h3>Product marketing &amp; Localization</h3>
+              <article class="fp-mobile__service-card">
+                <span class="fp-mobile__service-num">03</span>
+                <i class="ph ph-globe fp-mobile__service-icon" aria-hidden="true"></i>
+                <h3>Product Marketing &amp; Localization</h3>
               </article>
-              <article class="home-mobile__service-card">
-                <span>04</span>
-                <img src="./assets/img/service-market-access-minimal.svg" alt="" />
-                <h3>Market access &amp; Partnership</h3>
+              <article class="fp-mobile__service-card">
+                <span class="fp-mobile__service-num">04</span>
+                <i class="ph ph-briefcase fp-mobile__service-icon" aria-hidden="true"></i>
+                <h3>Market Access &amp; Partnership</h3>
               </article>
-              <article class="home-mobile__service-card">
-                <span>05</span>
-                <img src="./assets/img/service-government-relations-minimal.svg" alt="" />
-                <h3>Government &amp; Institutional relations</h3>
+              <article class="fp-mobile__service-card">
+                <span class="fp-mobile__service-num">05</span>
+                <i class="ph ph-bank fp-mobile__service-icon" aria-hidden="true"></i>
+                <h3>Government &amp; Institutional Relations</h3>
               </article>
-              <article class="home-mobile__service-card">
-                <span>06</span>
-                <img src="./assets/img/service-market-intelligence-minimal.svg" alt="" />
-                <h3>Ongoing market Intelligence &amp; support</h3>
+              <article class="fp-mobile__service-card">
+                <span class="fp-mobile__service-num">06</span>
+                <i class="ph ph-binoculars fp-mobile__service-icon" aria-hidden="true"></i>
+                <h3>Ongoing Market Intelligence &amp; Support</h3>
               </article>
             </div>
-            <div class="home-mobile__cta">
+            <div class="fp-mobile__cta">
               <a class="stroke-link stroke-link--dark text-uppercase text-normal" href="./brand-solutions.html">
                 <span class="stroke-link__label">Solutions</span>
                 <svg class="stroke-link__stroke" viewBox="0 0 220 80" aria-hidden="true">
@@ -347,17 +350,29 @@
             </div>
           </section>
 
-          <section class="home-mobile__section home-mobile__work">
-            <header class="home-mobile__heading">
-              <p class="home-mobile__kicker home-mobile__section-sub-title">From . to Story</p>
-              <p class="home-mobile__lead home-mobile__section-title">We transform tiny dots into <strong class="text-primary text-uppercase">Powerful Impacts</strong></p>
-
+          <!-- From Dots to Story -->
+          <section class="fp-mobile__section fp-mobile__work">
+            <header class="fp-mobile__heading">
+              <p class="fp-mobile__kicker">From <span class="fp-s2-dot" aria-hidden="true"></span> To Stories</p>
+              <p class="fp-mobile__lead fp-mobile__section-title">We transform tiny dots into <strong class="text-primary text-uppercase">Powerful Impacts</strong></p>
             </header>
-            <div class="home-mobile__work-images">
-              <img src="./assets/img/project-navro.jpg" alt="" />
-              <img src="./assets/img/project-cbr.jpg" alt="" />
+            <div class="fp-mobile__work-images">
+              <div class="fp-mobile__work-card">
+                <img src="./assets/img/project-navro.jpg" alt="" />
+                <div class="fp-mobile__work-label">
+                  <span>01. Case Study</span>
+                  <strong>Navro Market Debut</strong>
+                </div>
+              </div>
+              <div class="fp-mobile__work-card">
+                <img src="./assets/img/project-cbr.png" alt="" />
+                <div class="fp-mobile__work-label">
+                  <span>02. Case Study</span>
+                  <strong>CBR Story Grid</strong>
+                </div>
+              </div>
             </div>
-            <div class="home-mobile__cta">
+            <div class="fp-mobile__cta">
               <a class="stroke-link stroke-link--dark text-uppercase text-normal" href="./creations-discover.html">
                 <span class="stroke-link__label">Our Works</span>
                 <svg class="stroke-link__stroke" viewBox="0 0 220 80" aria-hidden="true">
@@ -367,25 +382,37 @@
             </div>
           </section>
 
-          <section class="home-mobile__about">
-            <img class="home-mobile__about-image" src="./assets/img/culture-creative-discussion.jpg" alt="" />
-            <div class="home-mobile__about-copy">
-              <p class="home-mobile__kicker home-mobile__section-sub-title">Behind the dot</p>
-              <h2 class="home-mobile__section-title">We are Connect Vietnam</h2>
-              <p class="home-mobile__section-content">We challenge <strong>limits, elevate visions</strong> &amp; <strong>spark opportunities</strong></p>
+          <!-- We Are Connect Vietnam -->
+          <section class="fp-mobile__about">
+            <img class="fp-mobile__about-image" src="./assets/img/office-reception.png" alt="" />
+            <div class="fp-mobile__about-copy">
+              <p class="fp-mobile__kicker">Behind The <span class="fp-s2-dot" aria-hidden="true"></span></p>
+              <h2 class="fp-mobile__about-title">We Are Connect Vietnam</h2>
+              <p class="fp-mobile__about-desc">We challenge limits, elevate visions &amp; spark opportunities</p>
             </div>
-            <div class="home-mobile__about-footer">
-              <p class="home-mobile__section-content text-center">Ready to make <strong>Real Impacts</strong></p>
-              <a class="stroke-link stroke-link--dark text-uppercase text-normal" href="./contact.html">
-                <span class="stroke-link__label">Connect</span>
-                <svg class="stroke-link__stroke" viewBox="0 0 180 80" aria-hidden="true">
-                  <path pathLength="1" d="M 18 27 C 2 40 10 59 52 64 C 110 70 158 54 168 21" />
+            <div class="fp-mobile__about-footer">
+              <div class="fp-mobile__stats">
+                <div class="fp-mobile__stat">
+                  <strong class="fp-mobile__stat-num">10+</strong>
+                  <span class="fp-mobile__stat-label text-uppercase">Year in Market</span>
+                </div>
+                <div class="fp-mobile__stat">
+                  <strong class="fp-mobile__stat-num">35+</strong>
+                  <span class="fp-mobile__stat-label text-uppercase">Brand Launched</span>
+                </div>
+              </div>
+              <p class="fp-mobile__about-cta-text">Ready to make <strong>Real Impacts?</strong></p>
+              <a class="fp-mobile__btn text-uppercase" href="./contact.html">
+                Connect
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
             </div>
           </section>
+
         </div>
-        <!-- END Home Mobile -->
+        <!-- END Frontpage Mobile -->
       </main>
       <!-- END Site Main -->
 
@@ -429,6 +456,6 @@
     <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/vendor/lenis/lenis.min.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/page-home.js"></script>
+    <script src="./assets/js/page-frontpage.js"></script>
   </body>
 </html>

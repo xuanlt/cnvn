@@ -66,16 +66,24 @@
 
             <div class="text-marquee text-marquee--compact careers-marquee" aria-hidden="true">
               <span class="text-marquee__track">
-                <span>Connect ✳ Create ✳ Challenge ✳ Keep Learning ✳</span>
-                <span>Connect ✳ Create ✳ Challenge ✳ Keep Learning ✳</span>
+                <span>Connect <span class="text-marquee__dot">●</span> Create <span class="text-marquee__dot">●</span> Challenge <span class="text-marquee__dot">●</span> Keep Learning <span class="text-marquee__dot">●</span></span>
+                <span>Connect <span class="text-marquee__dot">●</span> Create <span class="text-marquee__dot">●</span> Challenge <span class="text-marquee__dot">●</span> Keep Learning <span class="text-marquee__dot">●</span></span>
               </span>
             </div>
 
             <section class="careers-jobs" aria-labelledby="careersJobsTitle">
               <div class="container">
-                <header class="section-heading" data-careers-reveal>
-                  <p class="careers-label">Join Our Team</p>
-                  <h2 id="careersJobsTitle">We're looking for ...</h2>
+                <header class="section-heading careers-jobs__heading" data-careers-reveal>
+                  <div class="careers-jobs__heading-copy">
+                    <p class="careers-label">Join Our Team</p>
+                    <h2 id="careersJobsTitle">We're looking for ...</h2>
+                  </div>
+                  <button class="pill-cta careers-jobs__apply" type="button" data-careers-apply-open>
+                    Apply Now
+                    <svg class="pill-cta__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
                 </header>
                 <div class="row">
                   <div class="col col-12 col-md-8 col-sm-4">
@@ -146,6 +154,55 @@
         <div class="careers-drawer__panel">
           <button class="careers-drawer__close" type="button" aria-label="Close job details" data-careers-drawer-close><i class="ph ph-x" aria-hidden="true"></i></button>
           <div id="careersDrawerContent"></div>
+        </div>
+      </div>
+
+      <div class="careers-apply-modal" id="careersApplyModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="careersApplyModalTitle">
+        <button class="careers-apply-modal__overlay" type="button" aria-label="Close application form" data-careers-apply-close></button>
+        <div class="careers-apply-modal__box">
+          <button class="careers-apply-modal__close" type="button" aria-label="Close application form" data-careers-apply-close><i class="ph ph-x" aria-hidden="true"></i></button>
+          <p class="careers-label">Join Our Team</p>
+          <h2 class="h3" id="careersApplyModalTitle">Apply Now</h2>
+          <p class="careers-apply-modal__lead">Tell us a bit about yourself and attach your CV. We'll get back to you soon.</p>
+          <form class="apply-form" id="careersApplyForm" novalidate>
+            <label class="apply-form__field">
+              <span class="apply-form__label">Full Name</span>
+              <input class="apply-form__input" type="text" name="name" autocomplete="name" required />
+            </label>
+            <div class="apply-form__row">
+              <label class="apply-form__field">
+                <span class="apply-form__label">Email</span>
+                <input class="apply-form__input" type="email" name="email" autocomplete="email" required />
+              </label>
+              <label class="apply-form__field">
+                <span class="apply-form__label">Phone</span>
+                <input class="apply-form__input" type="tel" name="phone" autocomplete="tel" />
+              </label>
+            </div>
+            <label class="apply-form__field">
+              <span class="apply-form__label">Position</span>
+              <select class="apply-form__input" name="position" id="careersApplyPosition">
+                <option value="" disabled selected>Select a position</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label class="apply-form__field">
+              <span class="apply-form__label">Message</span>
+              <textarea class="apply-form__input apply-form__input--textarea" name="message" rows="3" placeholder="A few words about you (optional)"></textarea>
+            </label>
+            <label class="apply-form__upload" data-apply-upload for="careersApplyCv">
+              <input class="apply-form__upload-input" type="file" id="careersApplyCv" name="cv" accept=".pdf,.doc,.docx" required />
+              <i class="ph ph-upload-simple" aria-hidden="true"></i>
+              <span class="apply-form__upload-text" data-apply-upload-text>Upload your CV (PDF or Word, max 5MB)</span>
+            </label>
+            <p class="apply-form__note" id="careersApplyNote" role="status"></p>
+            <button class="pill-cta apply-form__submit" type="submit">
+              Submit Application
+              <svg class="pill-cta__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
 

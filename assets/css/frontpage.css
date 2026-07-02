@@ -156,7 +156,6 @@
   gap: 8px;
   font-size: var(--frontpage-grid-h4);
   line-height: 1;
-  padding-left:1.5vw
 }
 
 .fp-center-group span {
@@ -211,6 +210,14 @@
 
 .fp-scroll-btn:hover::before {
   transform: translateY(-50%) scale(1.2);
+}
+
+.fp-scroll-btn svg {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fp-scroll-btn:hover svg {
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
@@ -434,7 +441,7 @@
 }
 
 .fp-s5-stat-label {
-  font-size: calc(var(--frontpage-grid-h4) * 0.75);
+  font-size: calc(var(--frontpage-grid-h4) * 0.5);
   color: rgba(0, 0, 0, 0.5);
   font-weight: 400;
 }
@@ -448,7 +455,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   text-align: center;
 }
 
@@ -469,9 +476,10 @@
   background: var(--color-primary);
   color: white;
   border-radius: 100px;
-  padding: 0.65em 2em;
+  padding: 0.65em 1.5em;
   text-decoration: none;
   transition: opacity 0.25s;
+  margin-top: 0.75em;
 }
 
 .fp-s5-cta:hover {

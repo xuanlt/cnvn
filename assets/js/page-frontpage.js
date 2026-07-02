@@ -231,6 +231,7 @@
       screenTargets.forEach(function (target) {
         var words = target.querySelectorAll(".reveal-word");
         var isInlineStatement = target.querySelector(".text-inline-statement");
+        var isProjectCard = target.querySelector(".fp-project-card");
 
         window.gsap.set(target, {
           autoAlpha: 0,
@@ -246,12 +247,16 @@
           filter: isInlineStatement ? "blur(8px)" : "blur(0px)",
         });
 
-        screenTimeline.to(target, {
-          autoAlpha: 1,
-          x: 0,
-          duration: 0.55,
-          ease: "power3.out",
-        });
+        screenTimeline.to(
+          target,
+          {
+            autoAlpha: 1,
+            x: 0,
+            duration: 0.55,
+            ease: "power3.out",
+          },
+          isProjectCard ? "+=0.15" : undefined,
+        );
 
         if (words.length) {
           screenTimeline.to(

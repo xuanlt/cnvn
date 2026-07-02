@@ -52,6 +52,19 @@
       .join("");
   }
 
+  function renderPositionOptions() {
+    var select = document.querySelector("#careersApplyPosition");
+    var otherOption = select && select.querySelector('option[value="other"]');
+    if (!select || !otherOption) return;
+
+    jobs.forEach(function (job) {
+      var option = document.createElement("option");
+      option.value = job.id;
+      option.textContent = job.title;
+      select.insertBefore(option, otherOption);
+    });
+  }
+
   function renderList(items) {
     return items
       .map(function (item) {
@@ -85,10 +98,14 @@
       renderList(job.requirements) +
       "</ul></section></div>" +
       '<footer class="careers-drawer__apply"><p class="careers-label">How to apply</p><h3 class="h4">Apply for this role</h3>' +
-      '<p>Send your CV and portfolio, if applicable, to <a href="mailto:careers@connectvietnam.com">careers@connectvietnam.com</a>.</p>' +
-      '<p class="text-sm">Subject: ' +
-      job.title +
-      " - [Your Name]</p></footer>"
+      "<p>Send us your CV and we'll get back to you shortly.</p>" +
+      '<button class="pill-cta careers-drawer__apply-btn" type="button" data-careers-apply-open data-job-id="' +
+      job.id +
+      '">' +
+      "Apply Now" +
+      '<svg class="pill-cta__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">' +
+      '<path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>' +
+      "</button></footer>"
     );
   }
 
@@ -153,6 +170,72 @@
     });
   }
 
+  function initApplyModal() {
+    var modal = document.querySelector("#careersApplyModal");
+    var form = document.querySelector("#careersApplyForm");
+    var note = document.querySelector("#careersApplyNote");
+    var uploadInput = document.querySelector("#careersApplyCv");
+    var uploadText = document.querySelector("[data-apply-upload-text]");
+    var positionSelect = document.querySelector("#careersApplyPosition");
+    if (!modal || !form) return;
+
+    var uploadTextDefault = uploadText ? uploadText.textContent : "";
+    var applyLastFocusedElement;
+
+    function closeApplyModal() {
+      if (!modal.classList.contains("is-open")) return;
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("is-careers-apply-open");
+      if (applyLastFocusedElement) applyLastFocusedElement.focus();
+    }
+
+    function openApplyModal(trigger, jobId) {
+      applyLastFocusedElement = trigger;
+      if (positionSelect && jobId) positionSelect.value = jobId;
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("is-careers-apply-open");
+      modal.querySelector(".careers-apply-modal__close").focus();
+    }
+
+    document.addEventListener("click", function (event) {
+      var trigger = event.target.closest("[data-careers-apply-open]");
+      if (!trigger) return;
+      closeDrawer();
+      openApplyModal(trigger, trigger.dataset.jobId);
+    });
+
+    modal.querySelectorAll("[data-careers-apply-close]").forEach(function (button) {
+      button.addEventListener("click", closeApplyModal);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeApplyModal();
+    });
+
+    if (uploadInput && uploadText) {
+      uploadInput.addEventListener("change", function () {
+        var file = uploadInput.files && uploadInput.files[0];
+        uploadText.textContent = file ? file.name : uploadTextDefault;
+      });
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      if (note) note.textContent = "Thanks! Your application has been submitted.";
+      form.reset();
+      if (uploadText) uploadText.textContent = uploadTextDefault;
+
+      window.setTimeout(function () {
+        closeApplyModal();
+        if (note) note.textContent = "";
+      }, 1600);
+    });
+  }
+
   function initAnimations() {
     if (!window.gsap || !window.ScrollTrigger) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -199,8 +282,11 @@
     });
   }
 
+  initApplyModal();
+
   loadJobs().then(function () {
     renderJobs();
+    renderPositionOptions();
     initDrawer();
     initAnimations();
   });
